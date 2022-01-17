@@ -50,3 +50,39 @@
     }
   }
 }
+
+#about {
+  background-color: #82acff;
+  padding: 5%;
+
+  h1 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700;
+    font-size: min(5rem, 6vh, 12vw);
+    text-transform: uppercase;
+    line-height: 84%;
+    padding-top: min(1vh, 10px);
+    text-align: center;
+  }
+
+  .about-content {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-auto-columns: auto;
+    row-gap: 2rem;
+
+    p {
+      max-width: 50rem;
+    }
+
+    :nth-child(2) {
+      justify-self: right;
+      margin-left: 10%;
+    }
+    :nth-child(4) {
+      justify-self: right;
+      margin-left: 10%;
+    }
+  }
+}

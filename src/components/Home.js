@@ -42,7 +42,7 @@ const Home = () => {
           custom={1}
         >
           Prakhhar <br />
-          Makhija.
+          Makhija
         </motion.h1>
         <motion.h3
           ref={ref}
@@ -51,7 +51,7 @@ const Home = () => {
           variants={variants}
           custom={2}
         >
-          Also known as <span>Fredrick.</span>
+          Also known as <span>Fredrick</span>
         </motion.h3>
       </motion.div>
 
@@ -60,7 +60,7 @@ const Home = () => {
         initial="hidden"
         animate={controls}
         variants={variants}
-        custom={4}
+        custom={3}
         className="home-block-2"
       >
         <h2>
