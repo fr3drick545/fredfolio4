@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/fredfolio4/static/css/main.edf9a68e.css",
+    "main.js": "/fredfolio4/static/js/main.b9b9c624.js",
+    "index.html": "/fredfolio4/index.html",
+    "main.edf9a68e.css.map": "/fredfolio4/static/css/main.edf9a68e.css.map",
+    "main.b9b9c624.js.map": "/fredfolio4/static/js/main.b9b9c624.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.edf9a68e.css",
+    "static/js/main.b9b9c624.js"
+  ]
+}
