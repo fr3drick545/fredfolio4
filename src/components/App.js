@@ -8,16 +8,18 @@ import "./App.scss";
 import { motion, useViewportScroll, useAnimation } from "framer-motion";
 
 const App = () => {
-  const interval = setInterval(() => appendTitle(), 2000);
-  let titles = { size: 2, current: 0 };
+  const interval = setInterval(() => appendTitle(), 1500);
+  let titles = { size: 3, current: 0 };
 
   console.log("Hi There!");
 
   const appendTitle = () => {
     if (titles.current === 0) {
-      document.title = "Prakhhar Makhija | Game Dev";
+      document.title = "Prakhhar Makhija | Game &";
     } else if (titles.current === 1) {
-      document.title = "Prakhhar Makhija | Front-End Dev";
+      document.title = "Prakhhar Makhija | Front-End ";
+    } else if (titles.current === 2) {
+      document.title = "Prakhhar Makhija | Developer ";
     }
 
     titles.current++;
