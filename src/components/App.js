@@ -69,8 +69,10 @@ const App = () => {
       variants={colorVariants}
       id="app"
     >
-      <Home />
-      <About />
+      <div className="app-inner">
+        <Home />
+        <About />
+      </div>
     </motion.div>
   );
 };
