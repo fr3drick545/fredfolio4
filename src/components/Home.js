@@ -1,21 +1,7 @@
 import React from "react";
-import { motion, useAnimation } from "framer-motion";
-import { UniversalScrollY } from "..";
+import { motion } from "framer-motion";
 
 const Home = () => {
-  const controls = useAnimation();
-  window.addEventListener("scroll", () => scrollEvent());
-
-  if (controls) {
-    controls.start("visible");
-  }
-
-  const scrollEvent = () => {
-    if (UniversalScrollY >= -100) {
-      controls.start("visible");
-    } else controls.start("hidden");
-  };
-
   const variants = {
     visible: (delayAnim) => ({
       opacity: 1,
@@ -28,16 +14,18 @@ const Home = () => {
     <motion.div id="home">
       <motion.div
         initial="hidden"
-        animate={controls}
+        whileInView="visible"
         variants={variants}
         custom={0}
+        viewport={{ once: true }}
         className="home-block-1"
       >
         <h3>Hello, I am</h3>
         <motion.h1
           initial="hidden"
-          animate={controls}
+          whileInView="visible"
           variants={variants}
+          viewport={{ once: true }}
           custom={1}
         >
           Prakhhar <br />
@@ -45,8 +33,9 @@ const Home = () => {
         </motion.h1>
         <motion.h3
           initial="hidden"
-          animate={controls}
+          whileInView="visible"
           variants={variants}
+          viewport={{ once: true }}
           custom={2}
         >
           Also known as <span>Fredrick</span>
@@ -55,9 +44,10 @@ const Home = () => {
 
       <motion.div
         initial="hidden"
-        animate={controls}
+        whileInView="visible"
         variants={variants}
         custom={3}
+        viewport={{ once: true }}
         className="home-block-2"
       >
         <h2>

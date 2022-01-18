@@ -1,23 +1,7 @@
 import React from "react";
-import { motion, useAnimation } from "framer-motion";
-import { UniversalScrollY } from "..";
+import { motion } from "framer-motion";
 
 const About = () => {
-  const controls = useAnimation();
-  window.addEventListener("scroll", () => scrollEvent());
-
-  const scrollEvent = () => {
-    console.log(UniversalScrollY);
-
-    if (UniversalScrollY >= 150) {
-      controls.start("visibleAbout");
-    } else controls.start("hiddenAbout");
-
-    if (UniversalScrollY >= 200) {
-      controls.start("visible");
-    } else controls.start("hidden");
-  };
-
   const variants = {
     visibleAbout: (delayAnim) => ({
       opacity: 1,
@@ -38,9 +22,10 @@ const About = () => {
     <motion.div id="about">
       <motion.h1
         initial="hiddenAbout"
-        animate={controls}
+        whileInView="visibleAbout"
         variants={variants}
         custom={0}
+        viewport={{ once: true }}
         className="about-heading"
       >
         About Me
@@ -49,8 +34,9 @@ const About = () => {
       <motion.div className="about-content">
         <motion.p
           initial={{ opacity: 0, x: 200 }}
-          animate={controls}
+          whileInView="visible"
           variants={Xmove}
+          viewport={{ once: true }}
           custom={1.5}
         >
           I am a 21 year old Game Development Student from Algonquin College,
@@ -59,8 +45,9 @@ const About = () => {
         </motion.p>
         <motion.p
           initial={{ opacity: 0, x: -200 }}
-          animate={controls}
+          whileInView="visible"
           variants={Xmove}
+          viewport={{ once: true }}
           custom={2}
         >
           There always a behind the scenes curiosity while playing a game as to
@@ -69,8 +56,9 @@ const About = () => {
         </motion.p>
         <motion.p
           initial={{ opacity: 0, x: 200 }}
-          animate={controls}
+          whileInView="visible"
           variants={Xmove}
+          viewport={{ once: true }}
           custom={2.5}
         >
           In the beginning I limited myself to mostly C++ / C# which was the
@@ -79,8 +67,9 @@ const About = () => {
         </motion.p>
         <motion.p
           initial={{ opacity: 0, x: -200 }}
-          animate={controls}
+          whileInView="visible"
           variants={Xmove}
+          viewport={{ once: true }}
           custom={3}
         >
           I learned the structure of HTML / CSS in a week, then Javascript for
