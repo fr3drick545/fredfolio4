@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import Home from "./Home";
 import About from "./About";
@@ -8,11 +8,33 @@ import "./App.scss";
 import { motion, useViewportScroll, useAnimation } from "framer-motion";
 
 const App = () => {
+  const interval = setInterval(() => appendTitle(), 2000);
+  let titles = { size: 2, current: 0 };
+
+  console.log("Hi There!");
+
+  const appendTitle = () => {
+    if (titles.current === 0) {
+      document.title = "Prakhhar Makhija | Game Dev";
+    } else if (titles.current === 1) {
+      document.title = "Prakhhar Makhija | Front-End Dev";
+    }
+
+    titles.current++;
+
+    if (titles.current === titles.size) {
+      titles.current = 0;
+    }
+  };
+
+  useEffect(() => {
+    return () => clearInterval(interval);
+  });
+
   const controls = useAnimation();
   const { scrollY } = useViewportScroll();
 
   useEffect(() => {
-    console.log(scrollY.get());
     scrollY.onChange(() => {
       if (scrollY.get() < 200) {
         controls.start("initial");

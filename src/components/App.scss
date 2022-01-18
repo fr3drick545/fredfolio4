@@ -51,6 +51,7 @@
 }
 
 #about {
+  min-height: 100vh;
   padding: 5%;
 
   h1 {
@@ -82,5 +83,10 @@
       justify-self: right;
       margin-left: 10%;
     }
+  }
+
+  .wip {
+    margin-top: 10rem;
+    text-align: center;
   }
 }

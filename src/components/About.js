@@ -79,6 +79,12 @@ const About = () => {
           me.
         </motion.p>
       </motion.div>
+
+      <div className="wip">
+        <h2>
+          More coming soon :) <br /> Work In Progress
+        </h2>
+      </div>
     </motion.div>
   );
 };
