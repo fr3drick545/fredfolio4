@@ -15,7 +15,7 @@ const App = () => {
 
   const appendTitle = () => {
     if (titles.current === 0) {
-      document.title = "Prakhhar Makhija | Game &";
+      document.title = "Prakhhar Makhija | A Game &";
     } else if (titles.current === 1) {
       document.title = "Prakhhar Makhija | Front-End ";
     } else if (titles.current === 2) {
