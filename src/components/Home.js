@@ -1,19 +1,20 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { UniversalScrollY } from "..";
 
 const Home = () => {
   const controls = useAnimation();
-  const { ref, inView } = useInView();
+  window.addEventListener("scroll", () => scrollEvent());
 
-  useEffect(() => {
-    if (inView) {
+  if (controls) {
+    controls.start("visible");
+  }
+
+  const scrollEvent = () => {
+    if (UniversalScrollY >= -100) {
       controls.start("visible");
-    }
-    if (!inView) {
-      controls.start("hidden");
-    }
-  }, [controls, inView]);
+    } else controls.start("hidden");
+  };
 
   const variants = {
     visible: (delayAnim) => ({
@@ -26,7 +27,6 @@ const Home = () => {
   return (
     <motion.div id="home">
       <motion.div
-        ref={ref}
         initial="hidden"
         animate={controls}
         variants={variants}
@@ -35,7 +35,6 @@ const Home = () => {
       >
         <h3>Hello, I am</h3>
         <motion.h1
-          ref={ref}
           initial="hidden"
           animate={controls}
           variants={variants}
@@ -45,7 +44,6 @@ const Home = () => {
           Makhija
         </motion.h1>
         <motion.h3
-          ref={ref}
           initial="hidden"
           animate={controls}
           variants={variants}
@@ -56,7 +54,6 @@ const Home = () => {
       </motion.div>
 
       <motion.div
-        ref={ref}
         initial="hidden"
         animate={controls}
         variants={variants}

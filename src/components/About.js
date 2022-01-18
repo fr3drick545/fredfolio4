@@ -1,26 +1,29 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { UniversalScrollY } from "..";
 
 const About = () => {
   const controls = useAnimation();
-  const { ref, inView } = useInView();
+  window.addEventListener("scroll", () => scrollEvent());
 
-  useEffect(() => {
-    if (inView) {
+  const scrollEvent = () => {
+    console.log(UniversalScrollY);
+
+    if (UniversalScrollY >= 150) {
+      controls.start("visibleAbout");
+    } else controls.start("hiddenAbout");
+
+    if (UniversalScrollY >= 200) {
       controls.start("visible");
-    }
-    if (!inView) {
-      controls.start("hidden");
-    }
-  }, [controls, inView]);
+    } else controls.start("hidden");
+  };
 
   const variants = {
-    visible: (delayAnim) => ({
+    visibleAbout: (delayAnim) => ({
       opacity: 1,
       transition: { duration: 1, delay: delayAnim },
     }),
-    hidden: { opacity: 0 },
+    hiddenAbout: { opacity: 0 },
   };
 
   const Xmove = {
@@ -34,8 +37,7 @@ const About = () => {
   return (
     <motion.div id="about">
       <motion.h1
-        ref={ref}
-        initial="hidden"
+        initial="hiddenAbout"
         animate={controls}
         variants={variants}
         custom={0}
@@ -46,7 +48,6 @@ const About = () => {
 
       <motion.div className="about-content">
         <motion.p
-          ref={ref}
           initial={{ opacity: 0, x: 200 }}
           animate={controls}
           variants={Xmove}
@@ -57,7 +58,6 @@ const About = () => {
           websites.
         </motion.p>
         <motion.p
-          ref={ref}
           initial={{ opacity: 0, x: -200 }}
           animate={controls}
           variants={Xmove}
@@ -68,7 +68,6 @@ const About = () => {
           world of Game Development.
         </motion.p>
         <motion.p
-          ref={ref}
           initial={{ opacity: 0, x: 200 }}
           animate={controls}
           variants={Xmove}
@@ -79,7 +78,6 @@ const About = () => {
           interested in furthering my knowledge and looked into Web Development.
         </motion.p>
         <motion.p
-          ref={ref}
           initial={{ opacity: 0, x: -200 }}
           animate={controls}
           variants={Xmove}
