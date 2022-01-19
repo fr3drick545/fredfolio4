@@ -15,11 +15,11 @@ const App = () => {
 
   const appendTitle = () => {
     if (titles.current === 0) {
-      document.title = "Prakhhar Makhija | A Game &";
+      document.title = "PM | A Game &";
     } else if (titles.current === 1) {
-      document.title = "Prakhhar Makhija | Front-End ";
+      document.title = "PM | Front-End ";
     } else if (titles.current === 2) {
-      document.title = "Prakhhar Makhija | Developer ";
+      document.title = "PM | Developer ";
     }
 
     titles.current++;
