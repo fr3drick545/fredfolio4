@@ -78,15 +78,7 @@
 
     p {
       max-width: 50rem;
-    }
-
-    :nth-child(2) {
-      justify-self: right;
-      margin-left: 10%;
-    }
-    :nth-child(4) {
-      justify-self: right;
-      margin-left: 10%;
+      margin: 0 auto;
     }
   }
 

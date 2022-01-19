@@ -44,7 +44,7 @@ const About = () => {
           websites.
         </motion.p>
         <motion.p
-          initial={{ opacity: 0, x: -200 }}
+          initial={{ opacity: 0, x: 200 }}
           whileInView="visible"
           variants={Xmove}
           viewport={{ once: true }}
@@ -66,7 +66,7 @@ const About = () => {
           interested in furthering my knowledge and looked into Web Development.
         </motion.p>
         <motion.p
-          initial={{ opacity: 0, x: -200 }}
+          initial={{ opacity: 0, x: 200 }}
           whileInView="visible"
           variants={Xmove}
           viewport={{ once: true }}
