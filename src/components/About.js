@@ -50,9 +50,9 @@ const About = () => {
           viewport={{ once: true }}
           custom={2}
         >
-          There always a behind the scenes curiosity while playing a game as to
-          how do the developers make this stuff, which is what got me into the
-          world of Game Development.
+          There was always a behind the scenes curiosity while playing a game as
+          to how do the developers make this stuff, which is what got me into
+          the world of Game Development.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, x: 200 }}
@@ -62,8 +62,8 @@ const About = () => {
           custom={2.5}
         >
           In the beginning I limited myself to mostly C++ / C# which was the
-          bounds of my course at Algonquin College. Summer of 2021, I became
-          interested in furthering my knowledge and looked into Web Development.
+          bounds of my course at Algonquin College. Summer of 2021, I wanteed to
+          further my knowledge and looked into Web Development.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, x: 200 }}
