@@ -37,7 +37,7 @@ const About = () => {
           whileInView="visible"
           variants={Xmove}
           viewport={{ once: true }}
-          custom={1.5}
+          custom={0}
         >
           I am a 21 year old Game Development Student from Algonquin College,
           Ottawa. Highly passionate about coding, I like to create games and
@@ -48,7 +48,7 @@ const About = () => {
           whileInView="visible"
           variants={Xmove}
           viewport={{ once: true }}
-          custom={2}
+          custom={0.5}
         >
           There was always a behind the scenes curiosity while playing a game as
           to how do the developers make this stuff, which is what got me into
@@ -59,18 +59,18 @@ const About = () => {
           whileInView="visible"
           variants={Xmove}
           viewport={{ once: true }}
-          custom={2.5}
+          custom={1}
         >
           In the beginning I limited myself to mostly C++ / C# which was the
-          bounds of my course at Algonquin College. Summer of 2021, I wanteed to
-          further my knowledge and looked into Web Development.
+          bounds of my course. Summer of 2021, I wanted to further my knowledge
+          and looked into Web Development.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, x: 200 }}
           whileInView="visible"
           variants={Xmove}
           viewport={{ once: true }}
-          custom={3}
+          custom={1.5}
         >
           I learned the structure of HTML / CSS in a week, then Javascript for
           the remaining month. After finding out that a lot of the OOP concepts

@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 
 import Home from "./Home";
 import About from "./About";
+// import Background from "./Background";
+import Cursor from "./Cursor";
 
 import "./App.scss";
 
@@ -49,16 +51,16 @@ const App = () => {
 
   const colorVariants = {
     initial: {
-      backgroundColor: "rgb(139, 255, 255)",
+      backgroundColor: "rgb(17, 60, 252)",
     },
     colorChange1: {
-      backgroundColor: "rgb(130, 172, 255)",
+      backgroundColor: "rgb(25, 52, 152)",
     },
     colorChange2: {
-      backgroundColor: "rgb(143, 113, 255)",
+      backgroundColor: "rgb(21, 151, 229)",
     },
     colorChange3: {
-      backgroundColor: "rgb(255, 93, 158)",
+      backgroundColor: "rgb(105, 218, 219)",
     },
   };
 
@@ -69,10 +71,12 @@ const App = () => {
       variants={colorVariants}
       id="app"
     >
-      <div className="app-inner">
+      <Cursor />
+      {/* <Background /> */}
+      <motion.div className="app-inner">
         <Home />
         <About />
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
