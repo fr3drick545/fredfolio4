@@ -4,6 +4,7 @@ import Home from "./Home";
 import About from "./About";
 // import Background from "./Background";
 import Cursor from "./Cursor";
+import Footer from "./Footer";
 
 import "./App.scss";
 
@@ -49,18 +50,23 @@ const App = () => {
     });
   }, [scrollY, controls]);
 
+  const bgDuration = 0.2;
   const colorVariants = {
     initial: {
-      backgroundColor: "rgb(17, 60, 252)",
+      backgroundColor: "rgb(0, 113, 121)",
+      transition: { duration: bgDuration },
     },
     colorChange1: {
-      backgroundColor: "rgb(25, 52, 152)",
+      backgroundColor: "rgb(0, 51, 100)",
+      transition: { duration: bgDuration },
     },
     colorChange2: {
-      backgroundColor: "rgb(21, 151, 229)",
+      backgroundColor: "rgb(0, 34, 101)",
+      transition: { duration: bgDuration },
     },
     colorChange3: {
       backgroundColor: "rgb(105, 218, 219)",
+      transition: { duration: bgDuration },
     },
   };
 
@@ -77,6 +83,7 @@ const App = () => {
         <Home />
         <About />
       </motion.div>
+      <Footer />
     </motion.div>
   );
 };
