@@ -3,6 +3,11 @@ import React, { useEffect } from "react";
 const Cursor = () => {
   useEffect(() => {
     const cursor = document.querySelector("#custom-cursor");
+
+    window.addEventListener("touchstart", (e) => {
+      cursor.style.display = "none";
+    });
+
     document.addEventListener("mousemove", (e) => {
       cursor.style.left = e.clientX + "px";
       cursor.style.top = e.clientY + "px";
