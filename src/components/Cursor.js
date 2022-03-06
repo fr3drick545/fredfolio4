@@ -1,8 +1,44 @@
 import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 
 const Cursor = () => {
+  const cursorControls = useAnimation();
+
+  const cursorVariants = {
+    initial: {
+      scale: 1,
+      x: "-50%",
+      y: "-50%",
+      transition: { type: "spring", stiffness: 80 },
+    },
+    homeBlock1: {
+      scale: 7,
+      x: "-50%",
+      y: "-50%",
+      transition: { type: "spring", stiffness: 200 },
+    },
+    homeBlock2: {
+      scale: 5,
+      x: "-50%",
+      y: "-50%",
+      transition: { type: "spring", stiffness: 200 },
+    },
+    titles: {
+      scale: 2.5,
+      x: "-50%",
+      y: "-50%",
+      transition: { type: "spring", stiffness: 400 },
+    },
+    links: {
+      scale: 2,
+      x: "-50%",
+      y: "-50%",
+      transition: { type: "spring", stiffness: 500 },
+    },
+  };
+
   useEffect(() => {
-    const cursor = document.querySelector("#custom-cursor");
+    const cursor = document.querySelector(".cursor");
 
     window.addEventListener("touchstart", (e) => {
       cursor.style.display = "none";
@@ -17,39 +53,35 @@ const Cursor = () => {
     const home1 = document.querySelector(".home-block-1");
     const home2 = document.querySelector(".home-block-2");
     home1.addEventListener("mouseover", (e) => {
-      cursor.style.transform =
-        "scale(7) translate(calc(-50% / 7), calc(-50% / 7))";
+      cursorControls.start("homeBlock1");
     });
     home1.addEventListener("mouseleave", (e) => {
-      cursor.style.transform = "scale(1) translate(-50%, -50%)";
+      cursorControls.start("initial");
     });
 
     home2.addEventListener("mouseover", (e) => {
-      cursor.style.transform =
-        "scale(5) translate(calc(-50% / 5), calc(-50% / 5))";
+      cursorControls.start("homeBlock2");
     });
     home2.addEventListener("mouseleave", (e) => {
-      cursor.style.transform = "scale(1) translate(-50%, -50%)";
+      cursorControls.start("initial");
     });
 
     // * About
     const aboutTitle = document.querySelector(".about-heading");
     aboutTitle.addEventListener("mouseover", (e) => {
-      cursor.style.transform =
-        "scale(2.5) translate(calc(-50% / 2.5), calc(-50% / 2.5))";
+      cursorControls.start("titles");
     });
     aboutTitle.addEventListener("mouseleave", (e) => {
-      cursor.style.transform = "scale(1) translate(-50%, -50%)";
+      cursorControls.start("initial");
     });
 
     // * Projects
     const projectTitle = document.querySelector(".project-heading");
     projectTitle.addEventListener("mouseover", (e) => {
-      cursor.style.transform =
-        "scale(2.5) translate(calc(-50% / 2.5), calc(-50% / 2.5))";
+      cursorControls.start("titles");
     });
     projectTitle.addEventListener("mouseleave", (e) => {
-      cursor.style.transform = "scale(1) translate(-50%, -50%)";
+      cursorControls.start("initial");
     });
 
     // * Footer
@@ -57,16 +89,23 @@ const Cursor = () => {
 
     footerLinks.forEach((element) => {
       element.addEventListener("mouseover", (e) => {
-        cursor.style.transform =
-          "scale(2) translate(calc(-50% / 2), calc(-50% / 2))";
+        cursorControls.start("links");
       });
       element.addEventListener("mouseleave", (e) => {
-        cursor.style.transform = "scale(1) translate(-50%, -50%)";
+        cursorControls.start("initial");
       });
     });
-  }, []);
+  }, [cursorControls]);
 
-  return <div id="custom-cursor" className="cursor"></div>;
+  return (
+    <motion.div
+      className="cursor"
+      id="custom-cursor"
+      initial="initial"
+      animate={cursorControls}
+      variants={cursorVariants}
+    ></motion.div>
+  );
 };
 
 export default Cursor;

@@ -6,18 +6,18 @@ const Projects = () => {
   let vidSrc = "";
   let vidTitle = "";
   let posSrc = "";
+  let vidDesc = "";
 
-  const OnActivate = (videoSource, videoTitle, posterSource) => {
+  const OnActivate = (videoSource, videoTitle, posterSource, videoDesc) => {
     const fullView = document.getElementsByClassName("project-full-view");
 
     vidSrc = videoSource;
     vidTitle = videoTitle;
     posSrc = posterSource;
+    vidDesc = videoDesc;
 
-    console.log("reached");
-    if (fullView && fullView[0].style) {
-      controls.start("visible");
-    }
+    console.log(vidSrc);
+    controls.start("visible");
   };
 
   const GridItem = ({ videoSource, videoTitle, posterSource }) => {
@@ -99,11 +99,21 @@ const Projects = () => {
         onClick={() => controls.start("initial")}
         className="project-full-view"
       >
-        <div className="exit-button">X</div>
+        <div className="exit-button">
+          <span className="one"></span>
+          <span className="two"></span>
+        </div>
         <div className="project-content">
-          <video src={`/videos/${vidSrc}`} poster={`/videos/${posSrc}`}>
-            {vidTitle}
-          </video>
+          <div className="video-full-view">
+            <video src={`/videos/${vidSrc}`} poster={`/videos/${posSrc}`}>
+              {vidTitle}
+            </video>
+          </div>
+
+          <div className="project-text">
+            <div className="full-view-title">{vidTitle}</div>
+            <div className="full-view-description">{vidDesc}</div>
+          </div>
         </div>
       </motion.div>
     </div>
