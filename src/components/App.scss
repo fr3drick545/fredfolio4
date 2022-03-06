@@ -200,7 +200,7 @@
 
     @media only screen and (min-width: 640px) {
       grid-template-columns: repeat(2, 1fr);
-      gap: 4rem;
+      gap: 1rem 2%;
     }
   }
 
@@ -211,7 +211,7 @@
     .video-div {
       max-width: 90%;
       margin: 0 auto;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
     }
 
     video {
@@ -230,8 +230,10 @@
   .project-full-view {
     width: 100vw;
     height: 100vh;
-    background: black;
+    background: rgb(31, 30, 100);
     position: fixed;
-    z-index: 999;
+    left: 0;
+    // top: -100vh;
+    z-index: 25;
   }
 }

@@ -1,15 +1,30 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { titleVariants } from "./CommonVariants";
 
-class Projects extends React.Component {
-  OnActivate = (videoSource, videoTitle, posterSource) => {};
+const Projects = () => {
+  let vidSrc = "";
+  let vidTitle = "";
+  let posSrc = "";
 
-  GridItem = ({ videoSource, videoTitle, posterSource }) => {
+  const OnActivate = (videoSource, videoTitle, posterSource) => {
+    const fullView = document.getElementsByClassName("project-full-view");
+
+    vidSrc = videoSource;
+    vidTitle = videoTitle;
+    posSrc = posterSource;
+
+    console.log("reached");
+    if (fullView && fullView[0].style) {
+      controls.start("visible");
+    }
+  };
+
+  const GridItem = ({ videoSource, videoTitle, posterSource }) => {
     return (
       <div
         className="grid-item"
-        onClick={this.OnActivate(videoSource, videoTitle, posterSource)}
+        onClick={() => OnActivate(videoSource, videoTitle, posterSource)}
       >
         <div className="video-div">
           <video
@@ -24,57 +39,75 @@ class Projects extends React.Component {
     );
   };
 
-  render() {
-    return (
-      <div id="projects">
-        <motion.h1
-          initial="hiddenTitle"
-          whileInView="visibleAbout"
-          variants={titleVariants}
-          custom={0}
-          viewport={{ once: true }}
-          className="project-heading"
-        >
-          Projects
-        </motion.h1>
+  const controls = useAnimation();
 
-        <div className="projects-grid">
-          <this.GridItem
-            videoSource="BombermanAIDemo_Final.mp4"
-            videoTitle="Bomberman AI"
-            posterSource="BombermanAIDemo_Final.png"
-          />
-          <this.GridItem
-            videoSource="BombermanAIDemo_Final.mp4"
-            videoTitle="Bomberman AI"
-            posterSource="BombermanAIDemo_Final.png"
-          />
-          <this.GridItem
-            videoSource="BombermanAIDemo_Final.mp4"
-            videoTitle="Bomberman AI"
-            posterSource="BombermanAIDemo_Final.png"
-          />
-          <this.GridItem
-            videoSource="BombermanAIDemo_Final.mp4"
-            videoTitle="Bomberman AI"
-            posterSource="BombermanAIDemo_Final.png"
-          />
-          <this.GridItem
-            videoSource="BombermanAIDemo_Final.mp4"
-            videoTitle="Bomberman AI"
-            posterSource="BombermanAIDemo_Final.png"
-          />
-          <this.GridItem
-            videoSource="BombermanAIDemo_Final.mp4"
-            videoTitle="Bomberman AI"
-            posterSource="BombermanAIDemo_Final.png"
-          />
-        </div>
+  const videoVariants = {
+    initial: { top: "100vh", transition: { duration: 0.8 } },
+    visible: { top: "0", transition: { duration: 1 } },
+  };
 
-        <motion.div className="project-full-view"></motion.div>
+  return (
+    <div id="projects">
+      <motion.h1
+        initial="hiddenTitle"
+        whileInView="visibleTitle"
+        variants={titleVariants}
+        custom={0}
+        viewport={{ once: true }}
+        className="project-heading"
+      >
+        Projects
+      </motion.h1>
+
+      <div className="projects-grid">
+        <GridItem
+          videoSource="BombermanAIDemo_Final.mp4"
+          videoTitle="Bomberman AI"
+          posterSource="BombermanAIDemo_Final.png"
+        />
+        <GridItem
+          videoSource="BombermanAIDemo_Final.mp4"
+          videoTitle="Bomberman AI"
+          posterSource="BombermanAIDemo_Final.png"
+        />
+        <GridItem
+          videoSource="BombermanAIDemo_Final.mp4"
+          videoTitle="Bomberman AI"
+          posterSource="BombermanAIDemo_Final.png"
+        />
+        <GridItem
+          videoSource="BombermanAIDemo_Final.mp4"
+          videoTitle="Bomberman AI"
+          posterSource="BombermanAIDemo_Final.png"
+        />
+        <GridItem
+          videoSource="BombermanAIDemo_Final.mp4"
+          videoTitle="Bomberman AI"
+          posterSource="BombermanAIDemo_Final.png"
+        />
+        <GridItem
+          videoSource="BombermanAIDemo_Final.mp4"
+          videoTitle="Bomberman AI"
+          posterSource="BombermanAIDemo_Final.png"
+        />
       </div>
-    );
-  }
-}
+
+      <motion.div
+        initial="initial"
+        animate={controls}
+        variants={videoVariants}
+        onClick={() => controls.start("initial")}
+        className="project-full-view"
+      >
+        <div className="exit-button">X</div>
+        <div className="project-content">
+          <video src={`/videos/${vidSrc}`} poster={`/videos/${posSrc}`}>
+            {vidTitle}
+          </video>
+        </div>
+      </motion.div>
+    </div>
+  );
+};
 
 export default Projects;

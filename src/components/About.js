@@ -15,7 +15,7 @@ const About = () => {
     <motion.div id="about">
       <motion.h1
         initial="hiddenTitle"
-        whileInView="visibleAbout"
+        whileInView="visibleTitle"
         variants={titleVariants}
         custom={0}
         viewport={{ once: true }}

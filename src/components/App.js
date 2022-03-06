@@ -42,15 +42,13 @@ const App = () => {
 
   useEffect(() => {
     scrollY.onChange(() => {
-      console.log(scrollY.get());
-
       if (scrollY.get() < 200) {
         controls.start("initial");
       }
       if (scrollY.get() >= 200) {
         controls.start("colorChange1");
       }
-      if (scrollY.get() >= 1200) {
+      if (scrollY.get() >= 1600) {
         controls.start("colorChange2");
       }
     });
@@ -59,7 +57,7 @@ const App = () => {
   const bgDuration = 0.2;
   const colorVariants = {
     initial: {
-      backgroundColor: "rgb(106, 13, 173)",
+      backgroundColor: "rgb(0, 113, 121)",
       transition: { duration: bgDuration },
     },
     colorChange1: {
@@ -67,7 +65,7 @@ const App = () => {
       transition: { duration: bgDuration },
     },
     colorChange2: {
-      backgroundColor: "rgb(0, 15, 150)",
+      backgroundColor: "rgb(82, 81, 201)",
       transition: { duration: bgDuration },
     },
     colorChange3: {

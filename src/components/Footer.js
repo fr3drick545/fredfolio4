@@ -12,7 +12,7 @@ const Footer = () => {
               window.open(`./Prakhhar Makhija - Resume.pdf`, "_blank");
             }}
           >
-            <i class="fas fa-file"></i>
+            <i className="fas fa-file"></i>
           </a>
         </li>
 
@@ -27,13 +27,13 @@ const Footer = () => {
               );
             }}
           >
-            <i class="fab fa-linkedin"></i>
+            <i className="fab fa-linkedin"></i>
           </a>
         </li>
 
         <li className="contact-link">
           <a href="mailto:prakhharmakhija@gmail.com">
-            <i class="fas fa-envelope"></i>
+            <i className="fas fa-envelope"></i>
           </a>
         </li>
       </ul>

@@ -1,5 +1,5 @@
 export const titleVariants = {
-  visibleAbout: (delayAnim) => ({
+  visibleTitle: (delayAnim) => ({
     opacity: 1,
     transition: { duration: 1, delay: delayAnim },
   }),
