@@ -9,31 +9,37 @@ const Cursor = () => {
       scale: 1,
       x: "-50%",
       y: "-50%",
-      transition: { type: "spring", stiffness: 80 },
+      transition: { type: "spring", duration: 0.8, bounce: 0.4 },
     },
     homeBlock1: {
       scale: 7,
       x: "-50%",
       y: "-50%",
-      transition: { type: "spring", stiffness: 200 },
+      transition: { type: "spring", duration: 0.8, bounce: 0.7 },
     },
     homeBlock2: {
       scale: 5,
       x: "-50%",
       y: "-50%",
-      transition: { type: "spring", stiffness: 200 },
+      transition: { type: "spring", duration: 0.8, bounce: 0.7 },
     },
     titles: {
       scale: 2.5,
       x: "-50%",
       y: "-50%",
-      transition: { type: "spring", stiffness: 400 },
+      transition: { type: "spring", duration: 0.8, bounce: 0.7 },
     },
     links: {
       scale: 2,
       x: "-50%",
       y: "-50%",
-      transition: { type: "spring", stiffness: 500 },
+      transition: { type: "spring", duration: 0.8, bounce: 0.7 },
+    },
+    video: {
+      scale: 0.5,
+      x: "-50%",
+      y: "-50%",
+      transition: { type: "spring", duration: 0.8, bounce: 0.7 },
     },
   };
 
@@ -95,6 +101,18 @@ const Cursor = () => {
         cursorControls.start("initial");
       });
     });
+
+    // * Videos
+    // const videos = document.querySelectorAll("video");
+
+    // videos.forEach((element) => {
+    //   element.addEventListener("mouseover", (e) => {
+    //     cursorControls.start("video");
+    //   });
+    //   element.addEventListener("mouseleave", (e) => {
+    //     cursorControls.start("initial");
+    //   });
+    // });
   }, [cursorControls]);
 
   return (
