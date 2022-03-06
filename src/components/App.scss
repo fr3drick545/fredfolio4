@@ -72,6 +72,8 @@
     line-height: 84%;
     padding-top: min(1vh, 10px);
     text-align: center;
+    width: fit-content;
+    margin: 0 auto;
   }
 
   .about-content {
@@ -132,7 +134,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: white;
+  background-color: rgb(255, 255, 255, 1);
   pointer-events: none;
   transition: 0.1s all ease-out;
   transform: translate(-50%, -50%);
@@ -166,5 +168,70 @@
     font-size: 3rem;
     margin: 0 auto;
     transition: 0.2s;
+  }
+}
+
+#projects {
+  // min-height: 100vh;
+  padding: 5%;
+  margin: 5rem 0;
+
+  h1 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700;
+    font-size: min(5rem, 6vh, 12vw);
+    text-transform: uppercase;
+    line-height: 84%;
+    padding-top: min(1vh, 10px);
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .projects-grid {
+    margin-top: 4rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem 1rem;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (min-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
+    }
+  }
+
+  .grid-item {
+    overflow: hidden;
+    background-color: rgb(0, 0, 0, 0.2);
+
+    .video-div {
+      max-width: 90%;
+      margin: 0 auto;
+      margin-top: 1rem;
+    }
+
+    video {
+      max-width: 100%;
+    }
+
+    h3 {
+      font-weight: bold;
+      font-family: "Roboto", sans-serif;
+      text-align: center;
+      width: fit-content;
+      margin: 1rem auto;
+    }
+  }
+
+  .project-full-view {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    position: fixed;
+    z-index: 999;
   }
 }

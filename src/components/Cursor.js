@@ -13,6 +13,7 @@ const Cursor = () => {
       cursor.style.top = e.clientY + "px";
     });
 
+    // * Home
     const home1 = document.querySelector(".home-block-1");
     const home2 = document.querySelector(".home-block-2");
     home1.addEventListener("mouseover", (e) => {
@@ -31,6 +32,7 @@ const Cursor = () => {
       cursor.style.transform = "scale(1) translate(-50%, -50%)";
     });
 
+    // * About
     const aboutTitle = document.querySelector(".about-heading");
     aboutTitle.addEventListener("mouseover", (e) => {
       cursor.style.transform =
@@ -40,6 +42,17 @@ const Cursor = () => {
       cursor.style.transform = "scale(1) translate(-50%, -50%)";
     });
 
+    // * Projects
+    const projectTitle = document.querySelector(".project-heading");
+    projectTitle.addEventListener("mouseover", (e) => {
+      cursor.style.transform =
+        "scale(2.5) translate(calc(-50% / 2.5), calc(-50% / 2.5))";
+    });
+    projectTitle.addEventListener("mouseleave", (e) => {
+      cursor.style.transform = "scale(1) translate(-50%, -50%)";
+    });
+
+    // * Footer
     const footerLinks = document.querySelectorAll(".contact-link");
 
     footerLinks.forEach((element) => {

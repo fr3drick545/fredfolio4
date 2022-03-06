@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 import Home from "./Home";
 import About from "./About";
+import Projects from "./Projects";
 // import Background from "./Background";
 import Cursor from "./Cursor";
 import Footer from "./Footer";
@@ -41,11 +42,16 @@ const App = () => {
 
   useEffect(() => {
     scrollY.onChange(() => {
+      console.log(scrollY.get());
+
       if (scrollY.get() < 200) {
         controls.start("initial");
       }
       if (scrollY.get() >= 200) {
         controls.start("colorChange1");
+      }
+      if (scrollY.get() >= 1200) {
+        controls.start("colorChange2");
       }
     });
   }, [scrollY, controls]);
@@ -53,7 +59,7 @@ const App = () => {
   const bgDuration = 0.2;
   const colorVariants = {
     initial: {
-      backgroundColor: "rgb(0, 113, 121)",
+      backgroundColor: "rgb(106, 13, 173)",
       transition: { duration: bgDuration },
     },
     colorChange1: {
@@ -61,7 +67,7 @@ const App = () => {
       transition: { duration: bgDuration },
     },
     colorChange2: {
-      backgroundColor: "rgb(0, 34, 101)",
+      backgroundColor: "rgb(0, 15, 150)",
       transition: { duration: bgDuration },
     },
     colorChange3: {
@@ -82,6 +88,7 @@ const App = () => {
       <motion.div className="app-inner">
         <Home />
         <About />
+        <Projects />
       </motion.div>
       <Footer />
     </motion.div>

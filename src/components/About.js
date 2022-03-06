@@ -1,15 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { titleVariants } from "./CommonVariants";
 
 const About = () => {
-  const variants = {
-    visibleAbout: (delayAnim) => ({
-      opacity: 1,
-      transition: { duration: 1, delay: delayAnim },
-    }),
-    hiddenAbout: { opacity: 0 },
-  };
-
   const Xmove = {
     visible: (delayAnim) => ({
       opacity: 1,
@@ -21,9 +14,9 @@ const About = () => {
   return (
     <motion.div id="about">
       <motion.h1
-        initial="hiddenAbout"
+        initial="hiddenTitle"
         whileInView="visibleAbout"
-        variants={variants}
+        variants={titleVariants}
         custom={0}
         viewport={{ once: true }}
         className="about-heading"
@@ -80,11 +73,11 @@ const About = () => {
         </motion.p>
       </motion.div>
 
-      <div className="wip">
+      {/* <div className="wip">
         <h2>
           More coming soon :) <br /> Work In Progress
         </h2>
-      </div>
+      </div> */}
     </motion.div>
   );
 };
