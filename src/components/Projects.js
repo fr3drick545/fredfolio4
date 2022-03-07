@@ -6,15 +6,24 @@ const Projects = () => {
   const [vidSrc, setVidSrc] = useState("");
   const [vidTitle, setVidTitle] = useState("");
   const [posSrc, setPosSrc] = useState("");
-  const [viewingProject, setViewingProject] = useState(false);
+  let viewingProject = false;
   const controls = useAnimation();
+  const [updates, setUpdates] = useState(false);
 
   const videoVariants = {
     initial: { top: "100vh", transition: { duration: 0.8 } },
-    visible: { top: "0", transition: { duration: 1 } },
+    visible: { top: "0", transition: { duration: 0.8 } },
   };
 
-  useEffect(() => controls.start("initial"));
+  useEffect(() => {
+    if (!updates) {
+      controls.start("initial");
+      // console.log("reached here");
+    } else {
+      controls.start("visible");
+      console.log("reached");
+    }
+  }, [controls, updates]);
 
   const FullProjectView = ({
     videoSource = "null",
@@ -28,32 +37,35 @@ const Projects = () => {
         variants={videoVariants}
         className="project-full-view"
       >
-        <div
-          className="close-wrapper"
-          onClick={() => {
-            controls.start("initial");
-            setViewingProject(true);
-          }}
-        >
-          <div className="close-container">
-            <div className="leftright"></div>
-            <div className="rightleft"></div>
-          </div>
-        </div>
-
-        <div className="project-content">
-          <div className="full-view-title ">{videoTitle}</div>
-          <div className="video-full-view">
-            <video
-              src={`/videos/${videoSource}`}
-              poster={`/videos/${posterSource}`}
-              controls
-              autoPlay
-              loop
-            ></video>
+        <div className="full-view-inner">
+          <div
+            className="close-wrapper"
+            onClick={() => {
+              controls.start("initial");
+              setTimeout(() => setUpdates(false), 800);
+              viewingProject = false;
+            }}
+          >
+            <div className="close-container">
+              <div className="leftright"></div>
+              <div className="rightleft"></div>
+            </div>
           </div>
 
-          <div className="full-view-description"></div>
+          <div className="project-content">
+            <div className="full-view-title ">{videoTitle}</div>
+            <div className="video-full-view">
+              <video
+                src={`/videos/${videoSource}`}
+                poster={`/videos/${posterSource}`}
+                controls
+                autoPlay
+                loop
+              ></video>
+            </div>
+
+            <div className="full-view-description"></div>
+          </div>
         </div>
       </motion.div>
     );
@@ -61,17 +73,12 @@ const Projects = () => {
 
   const GridItem = ({ videoSource, videoTitle, posterSource }) => {
     return (
-      <div
+      <motion.div
         className="grid-item"
-        onClick={async () => {
-          setVidSrc(`${videoSource}`);
-          setVidTitle(`${videoTitle}`);
-          setPosSrc(`${posterSource}`);
-
-          await controls.start("visible");
-          //console.log(didStart);
-          // if (viewingProject === false)
-          //setViewingProject(!viewingProject);
+        onClick={() => {
+          setVidSrc(`${videoSource}`, setUpdates(true));
+          setVidTitle(`${videoTitle}`, setUpdates(true));
+          setPosSrc(`${posterSource}`, setUpdates(true));
         }}
       >
         <div className="video-div">
@@ -83,7 +90,7 @@ const Projects = () => {
           </video>
         </div>
         <h3>{videoTitle}</h3>
-      </div>
+      </motion.div>
     );
   };
 
@@ -102,9 +109,9 @@ const Projects = () => {
 
       <div className="projects-grid">
         <GridItem
-          videoSource="BombermanAIDemo_Final.mp4"
-          videoTitle="Bomberman AI"
-          posterSource="BombermanAIDemo_Final.png"
+          videoSource="CirclesDemo_Final.mp4"
+          videoTitle="Hyper Dot"
+          posterSource="CirclesDemo_Final.png"
         />
         <GridItem
           videoSource="GrappleHookDemo_Final.mp4"
@@ -112,19 +119,19 @@ const Projects = () => {
           posterSource="GrappleHookDemo_Final.png"
         />
         <GridItem
-          videoSource="BombermanAIDemo_Final.mp4"
-          videoTitle="Bomberman AI"
-          posterSource="BombermanAIDemo_Final.png"
+          videoSource="DonkeyKongDemo_Final.mp4"
+          videoTitle="Donkey Kong"
+          posterSource="DonkeyKongDemo_Final.png"
         />
         <GridItem
-          videoSource="BombermanAIDemo_Final.mp4"
-          videoTitle="Bomberman AI"
-          posterSource="BombermanAIDemo_Final.png"
+          videoSource="StarWarsDemo_Final.mp4"
+          videoTitle="Star Wars: Asteroid Rush"
+          posterSource="StarWarsDemo_Final.png"
         />
         <GridItem
-          videoSource="BombermanAIDemo_Final.mp4"
-          videoTitle="Bomberman AI"
-          posterSource="BombermanAIDemo_Final.png"
+          videoSource="SurfaceShaderDemo_Final.mp4"
+          videoTitle="Surface Shader"
+          posterSource="SurfaceShaderDemo_Final.png"
         />
         <GridItem
           videoSource="BombermanAIDemo_Final.mp4"

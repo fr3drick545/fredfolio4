@@ -9,7 +9,7 @@ const Cursor = () => {
       scale: 1,
       x: "-50%",
       y: "-50%",
-      transition: { type: "spring", duration: 0.8, bounce: 0.4 },
+      transition: { type: "spring", duration: 0.4, bounce: 0.4 },
     },
     homeBlock1: {
       scale: 7,
