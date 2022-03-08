@@ -38,6 +38,8 @@ const Projects = () => {
     videoTitle = "null",
     posterSource = "null",
   }) => {
+    if (videoSource === "null") return;
+
     return (
       <motion.div
         initial="initial"
