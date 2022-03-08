@@ -19,7 +19,7 @@ const Cursor = () => {
       scale: 1,
       x: "-50%",
       y: "-50%",
-      transition: { type: "spring", duration: 0.4, bounce: 0.4 },
+      transition: { type: "spring", duration: 0.6, bounce: 0.4 },
     },
     homeBlock1: {
       scale: 9,
@@ -55,13 +55,14 @@ const Cursor = () => {
 
   useEffect(() => {
     const cursor = document.querySelector(".cursor");
+    cursor.style.left = -100 + "px";
+    cursor.style.top = -100 + "px";
 
-    window.addEventListener("touchstart", (e) => {
+    document.addEventListener("touchstart", (e) => {
       cursor.style.display = "none";
     });
 
     document.addEventListener("mousemove", (e) => {
-      cursor.style.display = "inherit";
       cursor.style.left = e.clientX + "px";
       cursor.style.top = e.clientY + "px";
     });
