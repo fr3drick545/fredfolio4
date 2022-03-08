@@ -1,8 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 const Cursor = () => {
   const cursorControls = useAnimation();
+  const [currentVar, setCurrentVar] = useState("");
+  const changeState = (newState) => {
+    if (newState === currentVar) return;
+
+    setCurrentVar(newState);
+  };
+
+  useEffect(() => {
+    cursorControls.start(currentVar);
+  }, [currentVar, cursorControls]);
 
   const cursorVariants = {
     initial: {
@@ -12,34 +22,34 @@ const Cursor = () => {
       transition: { type: "spring", duration: 0.4, bounce: 0.4 },
     },
     homeBlock1: {
+      scale: 9,
+      x: "-50%",
+      y: "-50%",
+      transition: { type: "spring", duration: 0.6, bounce: 0 },
+    },
+    homeBlock2: {
       scale: 7,
       x: "-50%",
       y: "-50%",
-      transition: { type: "spring", duration: 0.8, bounce: 0.7 },
-    },
-    homeBlock2: {
-      scale: 5,
-      x: "-50%",
-      y: "-50%",
-      transition: { type: "spring", duration: 0.8, bounce: 0.7 },
+      transition: { type: "spring", duration: 0.6, bounce: 0 },
     },
     titles: {
-      scale: 2.5,
+      scale: 4,
       x: "-50%",
       y: "-50%",
-      transition: { type: "spring", duration: 0.8, bounce: 0.7 },
+      transition: { type: "spring", duration: 0.6, bounce: 0 },
     },
     links: {
-      scale: 2,
+      scale: 2.2,
       x: "-50%",
       y: "-50%",
-      transition: { type: "spring", duration: 0.8, bounce: 0.7 },
+      transition: { type: "spring", duration: 0.6, bounce: 0 },
     },
     video: {
       scale: 0.5,
       x: "-50%",
       y: "-50%",
-      transition: { type: "spring", duration: 0.8, bounce: 0.7 },
+      transition: { type: "spring", duration: 0.6, bounce: 0 },
     },
   };
 
@@ -60,35 +70,35 @@ const Cursor = () => {
     const home1 = document.querySelector(".home-block-1");
     const home2 = document.querySelector(".home-block-2");
     home1.addEventListener("mouseover", (e) => {
-      cursorControls.start("homeBlock1");
+      changeState("homeBlock1");
     });
     home1.addEventListener("mouseleave", (e) => {
-      cursorControls.start("initial");
+      changeState("initial");
     });
 
     home2.addEventListener("mouseover", (e) => {
-      cursorControls.start("homeBlock2");
+      changeState("homeBlock2");
     });
     home2.addEventListener("mouseleave", (e) => {
-      cursorControls.start("initial");
+      changeState("initial");
     });
 
     // * About
     const aboutTitle = document.querySelector(".about-heading");
     aboutTitle.addEventListener("mouseover", (e) => {
-      cursorControls.start("titles");
+      changeState("titles");
     });
     aboutTitle.addEventListener("mouseleave", (e) => {
-      cursorControls.start("initial");
+      changeState("initial");
     });
 
     // * Projects
     const projectTitle = document.querySelector(".project-heading");
     projectTitle.addEventListener("mouseover", (e) => {
-      cursorControls.start("titles");
+      changeState("titles");
     });
     projectTitle.addEventListener("mouseleave", (e) => {
-      cursorControls.start("initial");
+      changeState("initial");
     });
 
     // * Footer
@@ -96,13 +106,25 @@ const Cursor = () => {
 
     footerLinks.forEach((element) => {
       element.addEventListener("mouseover", (e) => {
-        cursorControls.start("links");
+        changeState("links");
       });
       element.addEventListener("mouseleave", (e) => {
-        cursorControls.start("initial");
+        changeState("initial");
       });
     });
-  }, [cursorControls]);
+
+    // * GridItems
+    const gridItems = document.querySelectorAll(".grid-item");
+
+    gridItems.forEach((element) => {
+      element.addEventListener("mouseover", (e) => {
+        changeState("video");
+      });
+      element.addEventListener("mouseleave", (e) => {
+        changeState("initial");
+      });
+    });
+  });
 
   return (
     <motion.div
