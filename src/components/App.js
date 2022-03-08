@@ -65,7 +65,7 @@ const App = () => {
       transition: { duration: bgDuration },
     },
     colorChange2: {
-      backgroundColor: "rgb(82, 81, 201)",
+      backgroundColor: "rgb(0, 91, 176)",
       transition: { duration: bgDuration },
     },
     colorChange3: {

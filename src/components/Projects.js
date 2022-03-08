@@ -1,28 +1,36 @@
 import React, { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { titleVariants } from "./CommonVariants";
+import { titleVariants, projectDescriptions } from "./CommonVariants";
 
 const Projects = () => {
   const [vidSrc, setVidSrc] = useState("");
   const [vidTitle, setVidTitle] = useState("");
   const [posSrc, setPosSrc] = useState("");
-  let viewingProject = false;
   const controls = useAnimation();
   const [updates, setUpdates] = useState(false);
 
   const videoVariants = {
     initial: { top: "100vh", transition: { duration: 0.8 } },
-    visible: { top: "0", transition: { duration: 0.8 } },
+    visible: { top: "0", bottom: 0, transition: { duration: 0.8 } },
+  };
+
+  const changeScroll = (normalScroll) => {
+    if (normalScroll) {
+      window.onscroll = function () {
+        // Get the current page scroll position
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        window.pageYOffset = scrollTop;
+        document.documentElement.scrollTop = scrollTop;
+      };
+    } else {
+      window.onscroll = function () {};
+    }
   };
 
   useEffect(() => {
-    if (!updates) {
-      controls.start("initial");
-      // console.log("reached here");
-    } else {
-      controls.start("visible");
-      console.log("reached");
-    }
+    updates ? controls.start("visible") : controls.start("initial");
   }, [controls, updates]);
 
   const FullProjectView = ({
@@ -42,8 +50,8 @@ const Projects = () => {
             className="close-wrapper"
             onClick={() => {
               controls.start("initial");
+              changeScroll(false);
               setTimeout(() => setUpdates(false), 800);
-              viewingProject = false;
             }}
           >
             <div className="close-container">
@@ -64,7 +72,9 @@ const Projects = () => {
               ></video>
             </div>
 
-            <div className="full-view-description"></div>
+            <div className="full-view-description">
+              {projectDescriptions(videoTitle)}
+            </div>
           </div>
         </div>
       </motion.div>
@@ -79,6 +89,7 @@ const Projects = () => {
           setVidSrc(`${videoSource}`, setUpdates(true));
           setVidTitle(`${videoTitle}`, setUpdates(true));
           setPosSrc(`${posterSource}`, setUpdates(true));
+          changeScroll(true);
         }}
       >
         <div className="video-div">
@@ -125,7 +136,7 @@ const Projects = () => {
         />
         <GridItem
           videoSource="StarWarsDemo_Final.mp4"
-          videoTitle="Star Wars: Asteroid Rush"
+          videoTitle="Asteroids"
           posterSource="StarWarsDemo_Final.png"
         />
         <GridItem

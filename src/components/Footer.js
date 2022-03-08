@@ -3,6 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div id="footer">
+      <h2>Thanks for visiting!</h2>
       <ul>
         <li className="contact-link">
           <a

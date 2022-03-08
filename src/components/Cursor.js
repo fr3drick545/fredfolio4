@@ -51,6 +51,7 @@ const Cursor = () => {
     });
 
     document.addEventListener("mousemove", (e) => {
+      cursor.style.display = "inherit";
       cursor.style.left = e.clientX + "px";
       cursor.style.top = e.clientY + "px";
     });
@@ -101,18 +102,6 @@ const Cursor = () => {
         cursorControls.start("initial");
       });
     });
-
-    // * Videos
-    // const videos = document.querySelectorAll("video");
-
-    // videos.forEach((element) => {
-    //   element.addEventListener("mouseover", (e) => {
-    //     cursorControls.start("video");
-    //   });
-    //   element.addEventListener("mouseleave", (e) => {
-    //     cursorControls.start("initial");
-    //   });
-    // });
   }, [cursorControls]);
 
   return (
