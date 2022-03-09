@@ -123,9 +123,9 @@ const Projects = () => {
 
       <div className="projects-grid">
         <GridItem
-          videoSource="CirclesDemo_Final.mp4"
-          videoTitle="Hyper Dot"
-          posterSource="CirclesDemo_Final.png"
+          videoSource="StarWarsDemo_Final.mp4"
+          videoTitle="Asteroids"
+          posterSource="StarWarsDemo_Final.png"
         />
         <GridItem
           videoSource="GrappleHookDemo_Final.mp4"
@@ -133,24 +133,24 @@ const Projects = () => {
           posterSource="GrappleHookDemo_Final.png"
         />
         <GridItem
-          videoSource="DonkeyKongDemo_Final.mp4"
-          videoTitle="Donkey Kong"
-          posterSource="DonkeyKongDemo_Final.png"
-        />
-        <GridItem
-          videoSource="StarWarsDemo_Final.mp4"
-          videoTitle="Asteroids"
-          posterSource="StarWarsDemo_Final.png"
-        />
-        <GridItem
           videoSource="SurfaceShaderDemo_Final.mp4"
           videoTitle="Surface Shader"
           posterSource="SurfaceShaderDemo_Final.png"
         />
         <GridItem
+          videoSource="DonkeyKongDemo_Final.mp4"
+          videoTitle="Donkey Kong"
+          posterSource="DonkeyKongDemo_Final.png"
+        />
+        <GridItem
           videoSource="BombermanAIDemo_Final.mp4"
           videoTitle="Bomberman AI"
           posterSource="BombermanAIDemo_Final.png"
+        />
+        <GridItem
+          videoSource="CirclesDemo_Final.mp4"
+          videoTitle="Hyper Dot"
+          posterSource="CirclesDemo_Final.png"
         />
       </div>
 
