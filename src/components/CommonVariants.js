@@ -15,6 +15,11 @@ export const projectDescriptions = (projectName) => {
   const CSharp = "C#";
   const HLSL = "HLSL";
   const CustomEngine = "Custom Engine";
+  const HTML = "HTML";
+  const CSS = "CSS";
+  const JavaScript = "JavaScript";
+  const ReactString = "React/JSX";
+  const VSCode = "VSCode";
 
   const getTags = (tags) => {
     let some = 0;
@@ -199,6 +204,46 @@ export const projectDescriptions = (projectName) => {
         </p>
         <br />
         <p>Assets belong to Nintendo.</p>
+      </div>
+    );
+  } else if (projectName === "Particle Interactive") {
+    return (
+      <div className="project-description">
+        <ul className="project-tags">
+          {getTags([`${ReactString}`, `${CSS}`, `${VSCode}`])}
+        </ul>
+        <p>
+          Company Website for Particle Interactive (A group of game development
+          students from Algonquin College).
+        </p>
+        <br />
+        <p>
+          The website features an About Us section for the team and a Dev Log
+          for blog posts and updates on the game.
+        </p>
+        <br />
+        <p>
+          It's also completely responsive and my first try at building a
+          Single-Page App (SPA).
+        </p>
+        <br />
+      </div>
+    );
+  } else if (projectName === "Soda Bottles E-Shop") {
+    return (
+      <div className="project-description">
+        <ul className="project-tags">
+          {getTags([`${HTML}`, `${CSS}`, `${JavaScript}`])}
+        </ul>
+        <p>My first front-end project. Made using HTML, CSS and JavaScript.</p>
+        <br />
+        <p>
+          This website serves as a E-Shop prototype. The goal was to learn and
+          practice HTML, CSS by using it and add some dynamic behaviour with
+          JavaScript.
+        </p>
+        <br />
+        <br />
       </div>
     );
   }

@@ -123,19 +123,29 @@ const Projects = () => {
 
       <div className="projects-grid">
         <GridItem
-          videoSource="StarWarsDemo_Final.mp4"
-          videoTitle="Asteroids"
-          posterSource="StarWarsDemo_Final.png"
-        />
-        <GridItem
           videoSource="GrappleHookDemo_Final.mp4"
           videoTitle="Grapple Hook"
           posterSource="GrappleHookDemo_Final.png"
         />
         <GridItem
+          videoSource="ParticleInteractiveWebsiteDemo_Final.mp4"
+          videoTitle="Particle Interactive"
+          posterSource="ParticleInteractiveWebsiteDemo_Final.png"
+        />
+        <GridItem
+          videoSource="StarWarsDemo_Final.mp4"
+          videoTitle="Asteroids"
+          posterSource="StarWarsDemo_Final.png"
+        />
+        <GridItem
           videoSource="SurfaceShaderDemo_Final.mp4"
           videoTitle="Surface Shader"
           posterSource="SurfaceShaderDemo_Final.png"
+        />
+        <GridItem
+          videoSource="SodaBottlesWebsiteDemo_Final.mp4"
+          videoTitle="Soda Bottles E-Shop"
+          posterSource="SodaBottlesWebsiteDemo_Final.png"
         />
         <GridItem
           videoSource="DonkeyKongDemo_Final.mp4"

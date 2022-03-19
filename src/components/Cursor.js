@@ -22,7 +22,7 @@ const Cursor = () => {
       transition: { type: "spring", duration: 0.6, bounce: 0.4 },
     },
     homeBlock1: {
-      scale: 9,
+      scale: 10,
       x: "-50%",
       y: "-50%",
       transition: { type: "spring", duration: 0.6, bounce: 0 },
@@ -45,11 +45,14 @@ const Cursor = () => {
       y: "-50%",
       transition: { type: "spring", duration: 0.6, bounce: 0 },
     },
-    video: {
+    gridItem: {
       scale: 0.5,
       x: "-50%",
       y: "-50%",
       transition: { type: "spring", duration: 0.6, bounce: 0 },
+    },
+    video: {
+      cursor: "auto",
     },
   };
 
@@ -119,7 +122,7 @@ const Cursor = () => {
 
     gridItems.forEach((element) => {
       element.addEventListener("mouseover", (e) => {
-        changeState("video");
+        changeState("gridItem");
       });
       element.addEventListener("mouseleave", (e) => {
         changeState("initial");
