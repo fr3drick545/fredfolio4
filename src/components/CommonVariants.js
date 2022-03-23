@@ -219,12 +219,24 @@ export const projectDescriptions = (projectName) => {
         <br />
         <p>
           The website features an About Us section for the team and a Dev Log
-          for blog posts and updates on the game.
+          for blog posts and updates on the game. A lot of sections are made
+          taking advantage of repeating React components. It has also been
+          updated with some animations using Framer Motion.
         </p>
         <br />
         <p>
           It's also completely responsive and my first try at building a
-          Single-Page App (SPA).
+          Single-Page App (SPA). You can visit the website
+          <a
+            href="https://particleinteractive.netlify.app/"
+            className="pi-link"
+            onClick={(e) => {
+              e.preventDefault();
+              window.open("https://particleinteractive.netlify.app/");
+            }}
+          >
+            here
+          </a>
         </p>
         <br />
       </div>
