@@ -64,6 +64,15 @@ const About = () => {
           whileInView="visible"
           variants={Xmove}
           viewport={{ once: true }}
+          custom={1.25}
+        >
+          At Light & Wonder, I've worked collaboratively with cross-functional teams including QA, Art, Production, Legal, and Game Design. This experience has taught me the importance of clear communication, understanding domain constraints, and building solutions that balance technical elegance with business requirements. I'm comfortable translating between technical and non-technical stakeholders.
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, x: 200 }}
+          whileInView="visible"
+          variants={Xmove}
+          viewport={{ once: true }}
           custom={1.5}
         >
           Beyond iGaming, I'm passionate about exploring the full game development landscape—from Unreal Engine and C++ for high-performance systems, to Unity and Godot for rapid prototyping. I believe great software comes from combining technical excellence with creative problem-solving and strong communication.
