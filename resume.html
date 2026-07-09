@@ -25,33 +25,33 @@ us e<!DOCTYPE html>
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            background-color: white;
             display: grid;
             grid-template-columns: 280px 1fr;
-            gap: 50px;
-            padding: 50px;
+            gap: 0;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
             border-radius: 4px;
+            overflow: hidden;
         }
 
         /* LEFT COLUMN */
         .left-column {
             display: flex;
             flex-direction: column;
-            border-right: 1px solid #e8eef5;
-            padding-right: 30px;
+            background-color: #00516f;
+            padding: 50px 30px;
+            color: white;
         }
 
         .header {
             padding-bottom: 25px;
             margin-bottom: 35px;
-            border-bottom: 3px solid #007179;
+            border-bottom: 3px solid #00d4ff;
         }
 
         .name {
             font-size: 28px;
             font-weight: 700;
-            color: #007179;
+            color: #00d4ff;
             margin-bottom: 15px;
             line-height: 1.1;
             letter-spacing: -0.5px;
@@ -62,7 +62,7 @@ us e<!DOCTYPE html>
             flex-direction: column;
             gap: 10px;
             font-size: 11px;
-            color: #555;
+            color: #b3d9e8;
         }
 
         .contact-item {
@@ -73,7 +73,7 @@ us e<!DOCTYPE html>
         }
 
         .contact-item a {
-            color: #007179;
+            color: #00d4ff;
             text-decoration: none;
             font-weight: 500;
             word-break: break-word;
@@ -81,7 +81,7 @@ us e<!DOCTYPE html>
         }
 
         .contact-item a:hover {
-            color: #005a62;
+            color: #66e5ff;
         }
 
         .left-section {
@@ -91,8 +91,8 @@ us e<!DOCTYPE html>
         .left-section-title {
             font-size: 11px;
             font-weight: 700;
-            color: #007179;
-            border-bottom: 2px solid #007179;
+            color: #00d4ff;
+            border-bottom: 2px solid #00d4ff;
             padding-bottom: 8px;
             margin-bottom: 15px;
             text-transform: uppercase;
@@ -105,7 +105,7 @@ us e<!DOCTYPE html>
 
         .skill-category-title {
             font-weight: 700;
-            color: #007179;
+            color: #b3d9e8;
             margin-bottom: 8px;
             font-size: 11px;
             text-transform: uppercase;
@@ -116,7 +116,7 @@ us e<!DOCTYPE html>
             list-style: none;
             font-size: 11px;
             line-height: 1.7;
-            color: #555;
+            color: #a0cee5;
         }
 
         .skill-list li {
@@ -128,6 +128,9 @@ us e<!DOCTYPE html>
         .right-column {
             display: flex;
             flex-direction: column;
+            background-color: white;
+            padding: 50px;
+            color: #2c3e50;
         }
 
         .header-right {
@@ -138,7 +141,7 @@ us e<!DOCTYPE html>
 
         .title {
             font-size: 18px;
-            color: #007179;
+            color: #00516f;
             font-weight: 700;
             letter-spacing: -0.3px;
         }
@@ -150,8 +153,8 @@ us e<!DOCTYPE html>
         .section-title {
             font-size: 11px;
             font-weight: 700;
-            color: #007179;
-            border-bottom: 2px solid #007179;
+            color: #00516f;
+            border-bottom: 2px solid #00516f;
             padding-bottom: 8px;
             margin-bottom: 15px;
             text-transform: uppercase;
@@ -159,11 +162,11 @@ us e<!DOCTYPE html>
         }
 
         .professional-summary {
-            background-color: #f8fbfc;
+            background-color: #f0f5f9;
             padding: 14px 16px;
-            border-left: 4px solid #007179;
+            border-left: 4px solid #00516f;
             line-height: 1.7;
-            color: #444;
+            color: #2c3e50;
             font-size: 12px;
             border-radius: 2px;
         }
@@ -173,7 +176,7 @@ us e<!DOCTYPE html>
             padding-bottom: 18px;
             padding-left: 16px;
             border-bottom: 1px solid #e8eef5;
-            border-left: 3px solid #007179;
+            border-left: 3px solid #00516f;
             position: relative;
         }
 
@@ -191,7 +194,7 @@ us e<!DOCTYPE html>
         .job-title {
             font-weight: 700;
             font-size: 12px;
-            color: #007179;
+            color: #00516f;
             margin-bottom: 2px;
         }
 
@@ -235,7 +238,7 @@ us e<!DOCTYPE html>
 
         .job-description li::before {
             content: "▪ ";
-            color: #007179;
+            color: #00516f;
             margin-right: 6px;
             font-weight: bold;
         }
@@ -253,7 +256,7 @@ us e<!DOCTYPE html>
         .education-school {
             font-weight: 700;
             font-size: 12px;
-            color: #007179;
+            color: #00516f;
             margin-bottom: 4px;
         }
 
@@ -287,15 +290,15 @@ us e<!DOCTYPE html>
 
         .achievement {
             padding: 10px;
-            background-color: #f8fbfc;
-            border-left: 3px solid #007179;
+            background-color: #f0f5f9;
+            border-left: 3px solid #00516f;
             font-size: 11px;
             line-height: 1.6;
             color: #555;
         }
 
         .achievement strong {
-            color: #007179;
+            color: #00516f;
             font-weight: 700;
         }
 
@@ -312,7 +315,7 @@ us e<!DOCTYPE html>
 
         .highlights li::before {
             content: "▪ ";
-            color: #007179;
+            color: #00516f;
             font-weight: bold;
             margin-right: 6px;
         }
@@ -331,14 +334,12 @@ us e<!DOCTYPE html>
 
             .container {
                 box-shadow: none;
-                padding: 0;
                 max-width: 100%;
-                gap: 40px;
                 border-radius: 0;
             }
 
             a {
-                color: #007179;
+                color: #00516f;
             }
         }
 
