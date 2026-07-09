@@ -12,30 +12,30 @@ import "./App.scss";
 import { motion, useViewportScroll, useAnimation } from "framer-motion";
 
 const App = () => {
-  const interval = setInterval(() => appendTitle(), 1500);
-  let titles = { size: 3, current: 0 };
+  const titles = React.useRef({ size: 3, current: 0 });
 
   console.log("Hi There!");
 
   const appendTitle = () => {
-    if (titles.current === 0) {
+    if (titles.current.current === 0) {
       document.title = "PM | A Game &";
-    } else if (titles.current === 1) {
+    } else if (titles.current.current === 1) {
       document.title = "PM | Front-End ";
-    } else if (titles.current === 2) {
+    } else if (titles.current.current === 2) {
       document.title = "PM | Developer ";
     }
 
-    titles.current++;
+    titles.current.current++;
 
-    if (titles.current === titles.size) {
-      titles.current = 0;
+    if (titles.current.current === titles.current.size) {
+      titles.current.current = 0;
     }
   };
 
   useEffect(() => {
+    const interval = setInterval(() => appendTitle(), 1500);
     return () => clearInterval(interval);
-  });
+  }, []);
 
   const controls = useAnimation();
   const { scrollY } = useViewportScroll();

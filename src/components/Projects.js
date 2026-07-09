@@ -89,9 +89,10 @@ const Projects = () => {
       <motion.div
         className="grid-item"
         onClick={() => {
-          setVidSrc(`${videoSource}`, setUpdates(true));
-          setVidTitle(`${videoTitle}`, setUpdates(true));
-          setPosSrc(`${posterSource}`, setUpdates(true));
+          setVidSrc(videoSource);
+          setVidTitle(videoTitle);
+          setPosSrc(posterSource);
+          setUpdates(true);
           changeScroll(true);
         }}
       >

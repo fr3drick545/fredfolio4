@@ -38,7 +38,7 @@ const Home = () => {
           viewport={{ once: true }}
           custom={2}
         >
-          Also known as <span>Fredrick</span>
+          Also known as <span>Fred</span>
         </motion.h3>
       </motion.div>
 

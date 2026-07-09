@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# FredFolio - Portfolio Website v2.0
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, interactive portfolio website showcasing game development and front-end projects. Built with React and Framer Motion for smooth animations and engaging user interactions.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **Smooth Animations**: Custom Framer Motion animations with scroll-based color transitions
+- **Interactive Cursor**: Custom cursor that scales based on hovered elements
+- **Project Showcase**: Grid-based project display with video previews and detailed descriptions
+- **Responsive Design**: Built with SCSS for beautiful, responsive styling
+- **Dark Theme**: Modern dark interface optimized for showcasing visual projects
 
-### `npm start`
+## 💻 Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React** 17.0.2 - UI framework
+- **Framer Motion** 5.6.0 - Animation library
+- **SCSS** - Styling with Sass
+- **React Intersection Observer** 8.33.1 - Viewport detection for animations
+- **GitHub Pages** - Deployment
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📦 Installation
 
-### `npm test`
+```bash
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🏃 Running the Project
 
-### `npm run build`
+### Development Mode
+```bash
+npm start
+```
+Opens [http://localhost:3000](http://localhost:3000) in your browser. The page reloads on changes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Build for Production
+```bash
+npm run build
+```
+Builds the app for production in the `build` folder with optimized performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Deploy to GitHub Pages
+```bash
+npm run deploy
+```
+Deployed to [https://pmak.dev/](https://pmak.dev/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📁 Project Structure
 
-### `npm run eject`
+```
+src/
+├── components/
+│   ├── App.js              - Main application component
+│   ├── Home.js             - Hero section
+│   ├── About.js            - About section with bio
+│   ├── Projects.js         - Project grid and full-view modal
+│   ├── Cursor.js           - Custom interactive cursor
+│   ├── Footer.js           - Contact links
+│   ├── CommonVariants.js   - Shared animation variants
+│   └── App.scss            - Main styles
+├── index.js                - React entry point
+public/
+├── videos/                 - Project demo videos
+└── ...
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🎮 Featured Projects
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Grapple Hook** - Unreal Engine mechanic
+- **Particle Interactive** - Interactive web experience
+- **Asteroids** - Space shooter game
+- **Surface Shader** - OpenGL shader demonstration
+- **Soda Bottles E-Shop** - React e-commerce site
+- **Donkey Kong** - Classic game recreation
+- **Bomberman AI** - Game with AI opponents
+- **Hyper Dot** - Custom engine game
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🔗 Links
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Portfolio**: [pmak.dev](https://pmak.dev/)
+- **LinkedIn**: [Prakhhar Makhija](https://www.linkedin.com/in/prakhhar-makhija/)
+- **Email**: prakhharmakhija@gmail.com
 
-## Learn More
+## 📄 License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open source. Feel free to use and modify as needed.

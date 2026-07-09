@@ -14,42 +14,34 @@ const Cursor = () => {
     cursorControls.start(currentVar);
   }, [currentVar, cursorControls]);
 
-  const cursorVariants = {
-    initial: {
-      scale: 1,
+  const defaultVariant = {
+    scale: 1,
       x: "-50%",
       y: "-50%",
       transition: { type: "spring", duration: 0.6, bounce: 0.4 },
-    },
+  }
+
+  const cursorVariants = {
+    initial: defaultVariant,
     homeBlock1: {
+      ...defaultVariant,
       scale: 10,
-      x: "-50%",
-      y: "-50%",
-      transition: { type: "spring", duration: 0.6, bounce: 0 },
     },
     homeBlock2: {
+      ...defaultVariant,
       scale: 7,
-      x: "-50%",
-      y: "-50%",
-      transition: { type: "spring", duration: 0.6, bounce: 0 },
     },
     titles: {
+      ...defaultVariant,
       scale: 4,
-      x: "-50%",
-      y: "-50%",
-      transition: { type: "spring", duration: 0.6, bounce: 0 },
     },
     links: {
+      ...defaultVariant,
       scale: 2.2,
-      x: "-50%",
-      y: "-50%",
-      transition: { type: "spring", duration: 0.6, bounce: 0 },
     },
     gridItem: {
+      ...defaultVariant,
       scale: 0.5,
-      x: "-50%",
-      y: "-50%",
-      transition: { type: "spring", duration: 0.6, bounce: 0 },
     },
     video: {
       cursor: "auto",
@@ -58,77 +50,71 @@ const Cursor = () => {
 
   useEffect(() => {
     const cursor = document.querySelector(".cursor");
+    if (!cursor) return;
+    
     cursor.style.left = -100 + "px";
     cursor.style.top = -100 + "px";
 
-    document.addEventListener("touchstart", (e) => {
+    const handleTouchStart = () => {
       cursor.style.display = "none";
-    });
+    };
 
-    document.addEventListener("mousemove", (e) => {
+    const handleMouseMove = (e) => {
       cursor.style.left = e.clientX + "px";
       cursor.style.top = e.clientY + "px";
-    });
+    };
 
+    const addToCursorScaleList = (elementToActOn, stateActivate) => {
+      if (!elementToActOn) return;
+      const handleMouseOver = () => changeState(stateActivate);
+      const handleMouseLeave = () => changeState("initial");
+      
+      elementToActOn.addEventListener("mouseover", handleMouseOver);
+      elementToActOn.addEventListener("mouseleave", handleMouseLeave);
+      
+      return () => {
+        elementToActOn.removeEventListener("mouseover", handleMouseOver);
+        elementToActOn.removeEventListener("mouseleave", handleMouseLeave);
+      };
+    }
+    
+    document.addEventListener("touchstart", handleTouchStart);
+    document.addEventListener("mousemove", handleMouseMove);
+    
+    const cleanupFunctions = [];
+    
     // * Home
     const home1 = document.querySelector(".home-block-1");
     const home2 = document.querySelector(".home-block-2");
-    home1.addEventListener("mouseover", (e) => {
-      changeState("homeBlock1");
-    });
-    home1.addEventListener("mouseleave", (e) => {
-      changeState("initial");
-    });
-
-    home2.addEventListener("mouseover", (e) => {
-      changeState("homeBlock2");
-    });
-    home2.addEventListener("mouseleave", (e) => {
-      changeState("initial");
-    });
+    cleanupFunctions.push(addToCursorScaleList(home1, "homeBlock1"));
+    cleanupFunctions.push(addToCursorScaleList(home2, "homeBlock2"));
 
     // * About
     const aboutTitle = document.querySelector(".about-heading");
-    aboutTitle.addEventListener("mouseover", (e) => {
-      changeState("titles");
-    });
-    aboutTitle.addEventListener("mouseleave", (e) => {
-      changeState("initial");
-    });
+    cleanupFunctions.push(addToCursorScaleList(aboutTitle, "titles"));
 
     // * Projects
     const projectTitle = document.querySelector(".project-heading");
-    projectTitle.addEventListener("mouseover", (e) => {
-      changeState("titles");
-    });
-    projectTitle.addEventListener("mouseleave", (e) => {
-      changeState("initial");
-    });
+    cleanupFunctions.push(addToCursorScaleList(projectTitle, "titles"));
 
     // * Footer
     const footerLinks = document.querySelectorAll(".contact-link");
-
     footerLinks.forEach((element) => {
-      element.addEventListener("mouseover", (e) => {
-        changeState("links");
-      });
-      element.addEventListener("mouseleave", (e) => {
-        changeState("initial");
-      });
+      cleanupFunctions.push(addToCursorScaleList(element, "links"));
     });
 
     // * GridItems
     const gridItems = document.querySelectorAll(".grid-item");
-
     gridItems.forEach((element) => {
-      element.addEventListener("mouseover", (e) => {
-        changeState("gridItem");
-      });
-      element.addEventListener("mouseleave", (e) => {
-        changeState("initial");
-      });
+      cleanupFunctions.push(addToCursorScaleList(element, "gridItem"));
     });
-  });
+    
+    return () => {
+      document.removeEventListener("touchstart", handleTouchStart);
+      document.removeEventListener("mousemove", handleMouseMove);
+      cleanupFunctions.forEach((cleanup) => cleanup && cleanup());
+    };
+  }, [changeState]);
 
   return (
     <motion.div

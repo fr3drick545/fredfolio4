@@ -7,10 +7,10 @@ const Footer = () => {
       <ul>
         <li className="contact-link">
           <a
-            href="./Prakhhar Makhija - Resume.pdf"
+            href="./Prakhhar Makhija - Resume.html"
             onClick={(e) => {
               e.preventDefault();
-              window.open(`./Prakhhar Makhija - Resume.pdf`, "_blank");
+              window.open(`./Prakhhar Makhija - Resume.html`, "_blank");
             }}
           >
             <i className="fas fa-file"></i>
