@@ -11,37 +11,51 @@ const Cursor = () => {
   };
 
   useEffect(() => {
-    cursorControls.start(currentVar);
+    cursorControls.start(currentVar, { type: "tween" });
   }, [currentVar, cursorControls]);
 
-  const defaultVariant = {
-    scale: 1,
-      x: "-50%",
-      y: "-50%",
-      transition: { type: "spring", duration: 0.6, bounce: 0.4 },
-  }
+  const transitionConfig = {
+    type: "tween",
+    duration: 0.2,
+    ease: "easeOut",
+  };
 
   const cursorVariants = {
-    initial: defaultVariant,
+    initial: {
+      scale: 1,
+      x: "-50%",
+      y: "-50%",
+      transition: transitionConfig,
+    },
     homeBlock1: {
-      ...defaultVariant,
       scale: 10,
+      x: "-50%",
+      y: "-50%",
+      transition: transitionConfig,
     },
     homeBlock2: {
-      ...defaultVariant,
       scale: 7,
+      x: "-50%",
+      y: "-50%",
+      transition: transitionConfig,
     },
     titles: {
-      ...defaultVariant,
       scale: 4,
+      x: "-50%",
+      y: "-50%",
+      transition: transitionConfig,
     },
     links: {
-      ...defaultVariant,
       scale: 2.2,
+      x: "-50%",
+      y: "-50%",
+      transition: transitionConfig,
     },
     gridItem: {
-      ...defaultVariant,
       scale: 0.5,
+      x: "-50%",
+      y: "-50%",
+      transition: transitionConfig,
     },
     video: {
       cursor: "auto",
