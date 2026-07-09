@@ -39,7 +39,7 @@ const About = () => {
             style={{ fontWeight: "300", color: "rgb(0,200,255)" }}
           >
             Light & Wonder
-          </a> with 4+ years of professional experience in iGaming Slots development. Currently leading a team of 3 engineers building next-generation game frameworks using Godot and TypeScript.
+          </a> with 4+ years of professional experience in iGaming Slots development. Currently building next-generation game frameworks using Godot and TypeScript.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, x: 200 }}
@@ -48,7 +48,7 @@ const About = () => {
           viewport={{ once: true }}
           custom={0.5}
         >
-          My career trajectory spans from Junior Gameplay Developer (2022) to Framework Developer (Aug 2023), where I was promoted to Senior after a year and a half. I've contributed to production iGaming titles using proprietary frameworks and cutting-edge game technologies, working across gameplay mechanics, framework architecture, and front-end optimization.
+          My career trajectory spans from Junior Gameplay Developer (2022) to Framework Developer (Aug 2023), where I was promoted to Senior (Mar 2026). I've contributed to production iGaming titles using proprietary frameworks and cutting-edge game technologies. My core tech stack includes React, Redux, TypeScript, and modern JavaScript patterns—combined with deep expertise in game-specific technologies like Pixi.js and WebGL.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, x: 200 }}
@@ -57,7 +57,7 @@ const About = () => {
           viewport={{ once: true }}
           custom={1}
         >
-          My technical expertise includes TypeScript, HTML5, Pixi.js, WebGL, and game framework design patterns. I've led initiatives in code architecture, performance optimization, and team mentorship. Currently spearheading a Godot-based framework concept that will shape the future of LnW's iGaming platform.
+          I've led initiatives across framework architecture, shader creation, performance optimization, and mentoring junior developers. My skillset spans the full spectrum: advanced graphics programming (WebGL2, custom shaders), front-end architecture (React, Redux state management), and low-level game mechanics. GitHub and collaborative tooling are fundamental to my workflow for building scalable systems.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, x: 200 }}
@@ -66,7 +66,7 @@ const About = () => {
           viewport={{ once: true }}
           custom={1.5}
         >
-          Beyond my professional work, I maintain passion for game development, exploring game engines like Unreal and Unity, building custom graphics pipelines, and creating web-based interactive experiences. I believe in combining technical excellence with creative problem-solving to deliver impactful digital products.
+          Beyond iGaming, I'm passionate about exploring the full game development landscape—from Unreal Engine and C++ for high-performance systems, to Unity and Godot for rapid prototyping. I'm experienced with Blender, Three.js, and Adobe creative tools (Photoshop, Illustrator, Figma). I believe great software comes from combining technical excellence with creative problem-solving and strong communication.
         </motion.p>
       </motion.div>
 
