@@ -1,31 +1,20 @@
 # BET99 Interview Preparation Checklist
+## Ranked by Priority
 
-## Technical Interview Preparation
+---
 
-### Frontend Fundamentals
-- [ ] Review HTML5 semantic elements and accessibility best practices
-- [ ] Master CSS Grid and Flexbox layouts - build responsive components from scratch
-- [ ] Deep dive: CSS media queries and responsive design patterns
-- [ ] Practice vanilla JavaScript fundamentals (closures, prototypes, event delegation, async/await)
-- [ ] Review ES6+ features (destructuring, spread operator, arrow functions, modules)
+## 🔴 TIER 1: MUST DO (80% of your effort)
+*These are non-negotiable for passing the interview. Focus here if time is limited.*
 
-### React Mastery
-- [ ] Practice building React components from scratch (class and functional)
+### React Fundamentals (CRITICAL)
 - [ ] Master hooks: useState, useEffect, useContext, useReducer, custom hooks
 - [ ] Understand React lifecycle and when to use each hook
 - [ ] Performance optimization: React.memo, useMemo, useCallback, lazy loading
 - [ ] State management patterns: local state vs prop drilling vs Context vs Redux
-- [ ] Code splitting and lazy loading implementation
+- [ ] Practice building React components from scratch (functional components)
 - [ ] Review React best practices for clean, maintainable code
 
-### Redux & State Management
-- [ ] Design Redux store structure for scalable applications
-- [ ] Understand actions, reducers, and middleware concepts
-- [ ] Practice: Connect components to Redux store efficiently
-- [ ] Selectors and reselect for performance optimization
-- [ ] Debugging Redux with DevTools
-
-### Testing Frameworks
+### Testing Frameworks (EXPLICITLY REQUIRED IN JOB POSTING)
 - [ ] **Jest:** Unit testing, mocking, snapshot testing, code coverage
   - [ ] Write test suites for React components
   - [ ] Mock API calls and external dependencies
@@ -33,132 +22,100 @@
 - [ ] **Cypress:** E2E testing, user interaction simulations
   - [ ] Write realistic user workflows
   - [ ] Test form submissions and validations
-  - [ ] Handle timeouts and waits properly
 
-### Performance Optimization (Critical for BET99)
+### Responsive Design & CSS (REQUIRED QUALIFICATION)
+- [ ] Master CSS Grid and Flexbox layouts - build responsive components from scratch
+- [ ] CSS media queries and responsive design patterns
+- [ ] Mobile-first approach implementation
+- [ ] Cross-device compatibility testing strategy
+
+### Performance Optimization (KEY DIFFERENTIATOR - Your Cover Letter Emphasis)
 - [ ] Identify bottlenecks using browser DevTools (Lighthouse, Performance tab)
-- [ ] Bundle size analysis and tree-shaking
-- [ ] Image optimization and lazy loading strategies
-- [ ] Network optimization (caching, minification, gzip)
-- [ ] Code splitting implementation
 - [ ] Real-world examples: How would you optimize a gaming UI dashboard?
+- [ ] Bundle size analysis and lazy loading strategies
+- [ ] Network optimization (caching, minification)
+- [ ] Code splitting implementation
 
-### Version Control & Git
-- [ ] Git workflows: branching strategies, merge conflicts, rebase
-- [ ] Code review best practices and giving feedback
-- [ ] Commit message conventions and documentation
-- [ ] Cherry-pick, stash, and other advanced Git operations
-
-### Build Tools & Tooling
-- [ ] Webpack configuration and optimization
-- [ ] npm scripts and package.json management
-- [ ] Environment variables and configuration management
-- [ ] Understand Docker basics (they mention this as nice-to-have)
-
-### Common Coding Challenges (Prepare for Whiteboard/LeetCode)
-- [ ] String manipulation (reverse, palindrome, anagram)
-- [ ] Array operations (sorting, filtering, searching, two-pointer)
-- [ ] Object/dictionary problems
-- [ ] Debounce and throttle implementations
-- [ ] Implement a simple cache/memoization
-- [ ] Promise.all, Promise.race, async control flow
-- [ ] FlatMap/flatten array implementations
-- [ ] Data structure fundamentals (linked lists, trees basics)
-
-### Real-World Scenario Questions (Gaming Context)
-- [ ] Design a responsive game lobby UI with multiple games
-- [ ] Build a high-performance scoreboard/leaderboard component
-- [ ] Optimize a payment form (responsive, accessible, performant)
-- [ ] Implement a real-time notifications system
-- [ ] Design a state management solution for a complex gaming application
+### Behavioral Interview Stories (CRITICAL FOR ANY INTERVIEW)
+- [ ] **Story 1:** Performance Optimization Success (specific metrics, tools, team collaboration)
+- [ ] **Story 2:** Testing Framework Implementation (Jest/Cypress introduction, results)
+- [ ] **Story 3:** Working Under Deadline Pressure (balance quality + speed, outcome)
+- [ ] **Story 4:** Responsive Design Challenge (mobile-first, cross-device validation)
+- [ ] Practice STAR method: Situation → Task → Action → Result
+- [ ] 60-second pitch about yourself (focus on React + iGaming + testing)
 
 ---
 
-## Behavioral Interview Preparation
+## 🟡 TIER 2: HIGHLY RECOMMENDED (15% of your effort)
+*Important but slightly less critical. Do these after Tier 1.*
 
-### Core Stories to Prepare (Based on Cover Letter)
-1. **Performance Optimization Success**
-   - [ ] Identify a real bottleneck from your Light & Wonder experience
-   - [ ] What was the impact? (metrics: faster load time, reduced memory, etc.)
-   - [ ] Specific tools and techniques used
-   - [ ] Team collaboration approach
+### Redux & State Management
+- [ ] Design Redux store structure for scalable applications
+- [ ] Understand actions, reducers, and middleware concepts
+- [ ] Practice: Connect components to Redux store efficiently
+- [ ] Debugging Redux with DevTools
 
-2. **Testing Framework Implementation**
-   - [ ] Story about introducing Jest/Cypress to a team or project
-   - [ ] How did it improve code quality?
-   - [ ] Challenges overcome
-   - [ ] Results and team adoption
+### Vanilla JavaScript Fundamentals
+- [ ] Closures, prototypes, event delegation, async/await
+- [ ] ES6+ features (destructuring, spread operator, arrow functions, modules)
+- [ ] Promise.all, Promise.race, async control flow
+- [ ] Debounce and throttle implementations
 
-3. **Mentorship & Leadership**
-   - [ ] Specific example of mentoring a junior developer
-   - [ ] What were they struggling with?
-   - [ ] How did you help them grow?
-   - [ ] Outcome and their improvement
-
-4. **Working Under Deadline Pressure**
-   - [ ] A time when you had tight deadlines and high quality standards
-   - [ ] How did you balance speed and quality?
-   - [ ] Team coordination
-   - [ ] What you learned
-
-5. **Responsive Design Excellence**
-   - [ ] Complex responsive design challenge you solved
-   - [ ] Mobile-first approach example
-   - [ ] Cross-device compatibility testing
-   - [ ] How you validated it across devices
-
-6. **Cross-Functional Collaboration**
-   - [ ] Time working with non-technical teams
-   - [ ] Challenge of different perspectives/goals
-   - [ ] How you communicated technical concepts
-   - [ ] Successful outcome
-
-### Standard Behavioral Questions
-- [ ] Tell me about yourself (60-second pitch, focus on relevance to role)
-- [ ] Why are you interested in BET99?
-- [ ] What are your strengths? (Link to job description)
-- [ ] What are your weaknesses? (Honest + growth mindset)
-- [ ] Describe a technical challenge you overcame
-- [ ] Tell me about a time you failed. What did you learn?
-- [ ] How do you handle disagreements with team members?
-- [ ] Describe your approach to code reviews
-- [ ] How do you stay current with technology?
-- [ ] Where do you see yourself in 5 years?
-- [ ] Why are you leaving Light & Wonder? (Have positive frame: growth opportunity, new challenge)
-- [ ] What's your ideal team/work environment?
-- [ ] Tell me about a time you had to learn something quickly
-- [ ] Describe your biggest achievement as a developer
-- [ ] How do you debug a complex issue?
+### Behavioral Interview (Secondary Stories)
+- [ ] **Story 5:** Mentorship & Leadership Example
+- [ ] **Story 6:** Cross-Functional Collaboration (worked with non-technical teams)
+- [ ] Standard interview questions (strengths, weaknesses, failures, disagreements)
 
 ### Company & Role Knowledge
-- [ ] **BET99 Background**
-  - [ ] Company history (launched 2020, Canada's premiere sportsbook)
-  - [ ] Mission and values: challenging status quo, trust, transparency, integrity, collaboration
-  - [ ] Recent achievements or features you know about
-  - [ ] Competitive landscape (vs. FanDuel, DraftKings, etc.)
-  - [ ] Product offerings (sportsbook + casino)
+- [ ] **BET99 Background:** Launched 2020, Canada's premiere sportsbook, mission/values
+- [ ] **Gaming Industry Basics:** Sportsbook mechanics, user experience priorities
+- [ ] **Role Fit:** Why you're perfect (React + iGaming experience)
 
-- [ ] **Gaming/Sportsbook Industry Knowledge**
-  - [ ] Understand sportsbook basics (odds, betting types, live betting)
-  - [ ] Casino game mechanics and RNG considerations
-  - [ ] User experience priorities in gaming (speed, reliability, fairness)
-  - [ ] Regulatory considerations in iGaming
-  - [ ] Mobile-first gaming trends
+### Git & Version Control
+- [ ] Git workflows: branching strategies, merge conflicts
+- [ ] Code review best practices
+- [ ] Commit message conventions
 
-- [ ] **Role Alignment**
-  - [ ] What makes a great Front-End Developer at a gaming company?
-  - [ ] Why you're a perfect fit (React + iGaming experience)
-  - [ ] Questions to ask about: team structure, tech stack, performance targets, user base
+---
 
-### Questions to Ask Them
-- [ ] **Technical:** What's your current tech stack? Are you using TypeScript? What testing frameworks?
-- [ ] **Team:** What does the Front-End team look like? How many engineers? What's the structure?
-- [ ] **Projects:** What are the biggest technical challenges you're facing right now?
-- [ ] **Growth:** What opportunities are there for growth and learning?
-- [ ] **Culture:** How does the team handle Agile? What's your sprint cycle?
-- [ ] **Performance:** What are your performance targets for the platform? How do you measure success?
-- [ ] **Code Quality:** How important is testing in your development process?
-- [ ] **On-Call:** Can you tell me more about the occasionally on-call requirement? What does that look like?
+## 🟢 TIER 3: NICE TO HAVE (5% of your effort)
+*Polish and advanced topics. Only if you have time after Tier 1 & 2.*
+
+### Common Coding Challenges
+- [ ] Array operations (sorting, filtering, searching)
+- [ ] String manipulation (reverse, palindrome, anagram)
+- [ ] Implement a simple cache/memoization
+- [ ] FlatMap/flatten array implementations
+
+### Advanced Scenarios
+- [ ] Design a real-time notifications system
+- [ ] Implement a real-time scoreboard/leaderboard component
+- [ ] Design state management solution for complex gaming app
+
+### Build Tools & Tooling
+- [ ] Webpack configuration basics
+- [ ] npm scripts and package.json management
+- [ ] Docker basics (mentioned as nice-to-have)
+
+### Additional Knowledge
+- [ ] Jenkins / Grafana / ELK (nice-to-have from job posting)
+- [ ] Data structure fundamentals (linked lists, trees basics)
+- [ ] Advanced Git operations (cherry-pick, stash, rebase)
+
+
+
+---
+
+## TIER 2: Standard Behavioral Questions (continued)
+- [ ] Describe your approach to code reviews
+- [ ] Why are you leaving Light & Wonder? (positive frame: growth opportunity, new challenge)
+- [ ] What's your ideal team/work environment?
+- [ ] Tell me about a time you had to learn something quickly
+- [ ] How do you debug a complex issue?
+
+---
+
+## Interview Day Essentials
 
 ---
 
