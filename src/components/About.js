@@ -32,9 +32,14 @@ const About = () => {
           viewport={{ once: true }}
           custom={0}
         >
-          I am a 21 year old Game Development Student from Algonquin College,
-          Ottawa. Highly passionate about coding, I like to create games and
-          websites.
+          Senior Front-End Software Engineer at <a
+            href="https://www.lnw.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ fontWeight: "300", color: "rgb(0,200,255)" }}
+          >
+            Light & Wonder
+          </a> with 4+ years of professional experience in iGaming Slots development. Currently leading a team of 3 engineers building next-generation game frameworks using Godot and TypeScript.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, x: 200 }}
@@ -43,9 +48,7 @@ const About = () => {
           viewport={{ once: true }}
           custom={0.5}
         >
-          There was always a behind the scenes curiosity while playing a game as
-          to how do the developers make this stuff, which is what got me into
-          the world of Game Development.
+          My career trajectory spans from Junior Gameplay Developer (2022) to Framework Developer (2023) to Senior Front-End Engineer (2026). I've contributed to production iGaming titles using proprietary frameworks and cutting-edge game technologies, working across gameplay mechanics, framework architecture, and front-end optimization.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, x: 200 }}
@@ -54,9 +57,7 @@ const About = () => {
           viewport={{ once: true }}
           custom={1}
         >
-          In the beginning I limited myself to mostly C++ / C# which was the
-          bounds of my course. Summer of 2021, I wanted to further my knowledge
-          and looked into Web Development.
+          My technical expertise includes TypeScript, HTML5, Pixi.js, WebGL, and game framework design patterns. I've led initiatives in code architecture, performance optimization, and team mentorship. Currently spearheading a Godot-based framework concept that will shape the future of LnW's iGaming platform.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, x: 200 }}
@@ -65,11 +66,7 @@ const About = () => {
           viewport={{ once: true }}
           custom={1.5}
         >
-          I learned the structure of HTML / CSS in a week, then Javascript for
-          the remaining month. After finding out that a lot of the OOP concepts
-          I learned in C++ can be applied to HTML using React, I started my
-          first Udemy course on it which opened a lot of logical processes for
-          me.
+          Beyond my professional work, I maintain passion for game development, exploring game engines like Unreal and Unity, building custom graphics pipelines, and creating web-based interactive experiences. I believe in combining technical excellence with creative problem-solving to deliver impactful digital products.
         </motion.p>
       </motion.div>
 
