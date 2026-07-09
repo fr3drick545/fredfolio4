@@ -17,7 +17,7 @@ const Cursor = () => {
   const transitionConfig = {
     type: "tween",
     duration: 0.2,
-    ease: "easeOut",
+    ease: "easeBackOut",
   };
 
   const cursorVariants = {
