@@ -66,7 +66,7 @@ const About = () => {
           viewport={{ once: true }}
           custom={1.5}
         >
-          Beyond iGaming, I'm passionate about exploring the full game development landscape—from Unreal Engine and C++ for high-performance systems, to Unity and Godot for rapid prototyping. I'm experienced with Blender, Three.js, and Adobe creative tools (Photoshop, Illustrator, Figma). I believe great software comes from combining technical excellence with creative problem-solving and strong communication.
+          Beyond iGaming, I'm passionate about exploring the full game development landscape—from Unreal Engine and C++ for high-performance systems, to Unity and Godot for rapid prototyping. I believe great software comes from combining technical excellence with creative problem-solving and strong communication.
         </motion.p>
       </motion.div>
 
