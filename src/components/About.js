@@ -48,7 +48,7 @@ const About = () => {
           viewport={{ once: true }}
           custom={0.5}
         >
-          My career trajectory spans from Junior Gameplay Developer (2022) to Framework Developer (2023) to Senior Front-End Engineer (2026). I've contributed to production iGaming titles using proprietary frameworks and cutting-edge game technologies, working across gameplay mechanics, framework architecture, and front-end optimization.
+          My career trajectory spans from Junior Gameplay Developer (2022) to Framework Developer (Aug 2023), where I was promoted to Senior after a year and a half. I've contributed to production iGaming titles using proprietary frameworks and cutting-edge game technologies, working across gameplay mechanics, framework architecture, and front-end optimization.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, x: 200 }}
