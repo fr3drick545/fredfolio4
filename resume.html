@@ -22,113 +22,142 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             background-color: white;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 40px;
             padding: 40px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
+        /* LEFT COLUMN */
+        .left-column {
+            display: flex;
+            flex-direction: column;
+        }
+
         .header {
-            border-bottom: 3px solid #0071791;
             padding-bottom: 20px;
             margin-bottom: 30px;
+            border-bottom: 2px solid #007179;
         }
 
         .name {
-            font-size: 32px;
+            font-size: 24px;
             font-weight: 700;
             color: #007179;
-            margin-bottom: 10px;
-        }
-
-        .title {
-            font-size: 18px;
-            color: #555;
-            font-weight: 600;
             margin-bottom: 15px;
+            line-height: 1.2;
         }
 
         .contact-info {
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            font-size: 14px;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 12px;
             color: #666;
         }
 
         .contact-item {
             display: flex;
-            align-items: center;
-            gap: 5px;
+            align-items: flex-start;
+            gap: 6px;
+            word-break: break-word;
         }
 
         .contact-item a {
             color: #0071791;
             text-decoration: none;
+            word-break: break-word;
         }
 
         .contact-item a:hover {
             text-decoration: underline;
         }
 
-        .section {
+        .left-section {
             margin-bottom: 30px;
         }
 
-        .section-title {
-            font-size: 18px;
+        .left-section-title {
+            font-size: 13px;
             font-weight: 700;
             color: #007179;
-            border-bottom: 2px solid #007179;
-            padding-bottom: 8px;
-            margin-bottom: 15px;
+            border-bottom: 1px solid #007179;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .skill-category {
+            margin-bottom: 14px;
+        }
+
+        .skill-category-title {
+            font-weight: 600;
+            color: #007179;
+            margin-bottom: 6px;
+            font-size: 12px;
+        }
+
+        .skill-list {
+            list-style: none;
+            font-size: 12px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .skill-list li {
+            margin-bottom: 4px;
+        }
+
+        /* RIGHT COLUMN */
+        .right-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-right {
+            margin-bottom: 25px;
+        }
+
+        .title {
+            font-size: 16px;
+            color: #555;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #007179;
+            border-bottom: 1px solid #007179;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
         .professional-summary {
             background-color: #f9f9f9;
-            padding: 15px;
-            border-left: 4px solid #007179;
-            line-height: 1.8;
+            padding: 12px;
+            border-left: 3px solid #007179;
+            line-height: 1.7;
             color: #444;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .skill-category {
-            padding: 10px 0;
-        }
-
-        .skill-category-title {
-            font-weight: 700;
-            color: #007179;
-            margin-bottom: 8px;
-            font-size: 14px;
-        }
-
-        .skill-list {
-            list-style: none;
-            font-size: 14px;
-            line-height: 1.8;
-            color: #555;
-        }
-
-        .skill-list li::before {
-            content: "• ";
-            color: #007179;
-            font-weight: bold;
-            margin-right: 8px;
+            font-size: 13px;
         }
 
         .job {
-            margin-bottom: 25px;
-            padding-bottom: 20px;
+            margin-bottom: 18px;
+            padding-bottom: 15px;
             border-bottom: 1px solid #eee;
         }
 
@@ -140,61 +169,61 @@
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
         }
 
         .job-title {
-            font-weight: 700;
-            font-size: 16px;
+            font-weight: 600;
+            font-size: 13px;
             color: #007179;
         }
 
         .job-company {
             font-weight: 600;
             color: #333;
-            font-size: 15px;
+            font-size: 13px;
+            margin-bottom: 3px;
         }
 
         .job-location {
-            font-size: 13px;
+            font-size: 12px;
             color: #666;
             font-style: italic;
         }
 
         .job-dates {
-            font-size: 13px;
+            font-size: 12px;
             color: #888;
             font-weight: 500;
         }
 
         .job-description {
-            margin-top: 10px;
-            font-size: 14px;
-            line-height: 1.7;
+            margin-top: 8px;
+            font-size: 12px;
+            line-height: 1.6;
             color: #555;
         }
 
         .job-description ul {
-            margin-left: 20px;
-            margin-top: 8px;
-            list-style-position: inside;
+            margin-left: 18px;
+            margin-top: 6px;
+            list-style: none;
         }
 
         .job-description li {
-            margin-bottom: 6px;
-            list-style-type: none;
+            margin-bottom: 4px;
         }
 
         .job-description li::before {
-            content: "▪ ";
+            content: "• ";
             color: #007179;
-            margin-right: 8px;
+            margin-right: 6px;
             font-weight: bold;
         }
 
         .education {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
             border-bottom: 1px solid #eee;
         }
 
@@ -203,64 +232,65 @@
         }
 
         .education-school {
-            font-weight: 700;
-            font-size: 16px;
+            font-weight: 600;
+            font-size: 13px;
             color: #007179;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
         }
 
         .education-program {
             font-weight: 600;
             color: #333;
-            font-size: 15px;
-            margin-bottom: 5px;
+            font-size: 12px;
+            margin-bottom: 4px;
         }
 
         .education-details {
-            font-size: 14px;
+            font-size: 12px;
             color: #666;
             line-height: 1.6;
         }
 
         .achievements {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
+            grid-template-columns: 1fr;
+            gap: 10px;
         }
 
         .achievement {
-            padding: 12px;
+            padding: 10px;
             background-color: #f9f9f9;
             border-left: 3px solid #007179;
-            font-size: 14px;
-            line-height: 1.6;
+            font-size: 12px;
+            line-height: 1.5;
             color: #555;
         }
 
-        .achievement::before {
-            content: "✓ ";
+        .achievement strong {
             color: #007179;
-            font-weight: bold;
-            margin-right: 5px;
         }
 
         .highlights {
             list-style: none;
-            font-size: 14px;
-            line-height: 1.8;
+            font-size: 12px;
+            line-height: 1.7;
             color: #555;
+        }
+
+        .highlights li {
+            margin-bottom: 5px;
         }
 
         .highlights li::before {
             content: "▪ ";
             color: #007179;
             font-weight: bold;
-            margin-right: 8px;
+            margin-right: 6px;
         }
 
         .about-text {
-            font-size: 14px;
-            line-height: 1.8;
+            font-size: 12px;
+            line-height: 1.7;
             color: #555;
         }
 
@@ -274,6 +304,7 @@
                 box-shadow: none;
                 padding: 0;
                 max-width: 100%;
+                gap: 30px;
             }
 
             a {
@@ -283,277 +314,203 @@
 
         @media (max-width: 768px) {
             .container {
+                grid-template-columns: 1fr;
+                gap: 20px;
                 padding: 20px;
             }
 
             .name {
-                font-size: 24px;
-            }
-
-            .job-header {
-                flex-direction: column;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .achievements {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-info {
-                flex-direction: column;
-                gap: 8px;
+                font-size: 20px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <div class="name">PRAKHHAR MAKHIJA</div>
-            <div class="title">Senior Front-End Software Engineer</div>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <span>📧</span>
-                    <a href="mailto:prakhharmakhija@gmail.com">prakhharmakhija@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <span>📱</span>
-                    <span>613-795-1884</span>
-                </div>
-                <div class="contact-item">
-                    <span>🔗</span>
-                    <a href="https://www.linkedin.com/in/prakhhar-makhija/" target="_blank">LinkedIn</a>
-                </div>
-                <div class="contact-item">
-                    <span>🌐</span>
-                    <a href="https://pmak.dev" target="_blank">Portfolio Website</a>
+        <!-- LEFT COLUMN -->
+        <div class="left-column">
+            <!-- Header -->
+            <div class="header">
+                <div class="name">PRAKHHAR<br>MAKHIJA</div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="left-section">
+                <div class="left-section-title">Contact</div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <a href="mailto:prakhharmakhija@gmail.com">prakhharmakhija@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>📱</span>
+                        <span>613-795-1884</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>🔗</span>
+                        <a href="https://www.linkedin.com/in/prakhhar-makhija/" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>🌐</span>
+                        <a href="https://pmak.dev" target="_blank">Portfolio</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Professional Summary -->
-        <div class="section">
-            <div class="section-title">Professional Summary</div>
-            <div class="professional-summary">
-                Senior Front-End Software Engineer with 4+ years of professional experience at Light & Wonder, specializing in iGaming Slots development and proprietary framework architecture. Proven track record of advancing from Junior Gameplay Developer to Senior Engineer through technical excellence and leadership. Expert in building high-performance game frameworks using modern web technologies (React, Redux, TypeScript) and graphics APIs (WebGL2, Pixi.js). Demonstrated ability to lead technical initiatives, mentor junior developers, and collaborate effectively across QA, Art, Production, and Legal teams. Strong communicator who bridges technical complexity with business requirements.
-            </div>
-        </div>
-
-        <!-- Core Technical Skills -->
-        <div class="section">
-            <div class="section-title">Core Technical Skills</div>
-            <div class="skills-grid">
+            <!-- Skills -->
+            <div class="left-section">
+                <div class="left-section-title">Skills</div>
+                
                 <div class="skill-category">
-                    <div class="skill-category-title">Programming Languages</div>
+                    <div class="skill-category-title">Programming</div>
                     <ul class="skill-list">
-                        <li>TypeScript, JavaScript</li>
-                        <li>C++, C#</li>
-                        <li>HTML/CSS</li>
+                        <li>TypeScript</li>
+                        <li>JavaScript</li>
+                        <li>C++</li>
+                        <li>C#</li>
+                        <li>HTML / CSS</li>
                     </ul>
                 </div>
+
                 <div class="skill-category">
-                    <div class="skill-category-title">Frontend & Game Technologies</div>
+                    <div class="skill-category-title">Frontend</div>
                     <ul class="skill-list">
-                        <li>React, Redux</li>
-                        <li>Pixi.js, WebGL2</li>
-                        <li>Three.js, Framer Motion</li>
-                        <li>Shader Creation & Graphics</li>
+                        <li>React</li>
+                        <li>Redux</li>
+                        <li>Pixi.js</li>
+                        <li>WebGL2</li>
+                        <li>Three.js</li>
+                        <li>Framer Motion</li>
                     </ul>
                 </div>
+
                 <div class="skill-category">
-                    <div class="skill-category-title">Game Engines & Frameworks</div>
+                    <div class="skill-category-title">Game Tech</div>
                     <ul class="skill-list">
-                        <li>Godot, Unreal Engine</li>
+                        <li>Godot</li>
+                        <li>Unreal Engine</li>
                         <li>Unity</li>
-                        <li>Proprietary iGaming Frameworks</li>
-                        <li>Custom Engine Development</li>
+                        <li>Shader Creation</li>
+                        <li>Graphics Programming</li>
                     </ul>
                 </div>
+
                 <div class="skill-category">
-                    <div class="skill-category-title">Developer Tools & Practices</div>
+                    <div class="skill-category-title">Tools</div>
                     <ul class="skill-list">
-                        <li>Git/GitHub, Node.js</li>
-                        <li>CI/CD, Performance Optimization</li>
-                        <li>Agile Development</li>
-                        <li>Code Architecture</li>
+                        <li>Git / GitHub</li>
+                        <li>Node.js</li>
+                        <li>Webpack</li>
+                        <li>CI/CD</li>
                     </ul>
                 </div>
+
                 <div class="skill-category">
                     <div class="skill-category-title">Soft Skills</div>
                     <ul class="skill-list">
                         <li>Team Leadership</li>
-                        <li>Technical Mentorship</li>
+                        <li>Mentorship</li>
                         <li>Problem Solving</li>
                         <li>Communication</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-category-title">Collaboration</div>
-                    <ul class="skill-list">
-                        <li>Cross-functional Teams</li>
-                        <li>Stakeholder Management</li>
-                        <li>Agile/Scrum Practices</li>
+                        <li>Cross-functional Collaboration</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <!-- Professional Experience -->
-        <div class="section">
-            <div class="section-title">Professional Experience</div>
+        <!-- RIGHT COLUMN -->
+        <div class="right-column">
+            <!-- Header -->
+            <div class="header-right">
+                <div class="title">Senior Front-End Software Engineer</div>
+            </div>
 
-            <div class="job">
-                <div class="job-header">
-                    <span>
-                        <div class="job-title">Senior Front-End Software Engineer</div>
-                        <div class="job-company">Light & Wonder - iGaming</div>
-                    </span>
-                    <span class="job-dates">March 2026 - Present</span>
-                </div>
-                <div class="job-location">Montreal, Quebec</div>
-                <div class="job-description">
-                    <ul>
-                        <li>Leading technical initiatives for next-generation iGaming Slots framework development using Godot and TypeScript</li>
-                        <li>Architecting high-performance front-end solutions for production gaming titles</li>
-                        <li>Mentoring junior developers and establishing best practices for framework development</li>
-                        <li>Collaborating across QA, Art, Production, Legal, and Game Design teams to deliver complex features</li>
-                        <li>Optimizing performance and maintaining scalability across multiple concurrent game projects</li>
-                    </ul>
+            <!-- Professional Summary -->
+            <div class="section">
+                <div class="section-title">Professional Summary</div>
+                <div class="professional-summary">
+                    Senior Front-End Software Engineer with 4+ years of professional experience at Light & Wonder, specializing in iGaming Slots development and proprietary framework architecture. Proven track record of advancing from Junior Gameplay Developer to Senior Engineer through technical excellence and leadership. Expert in building high-performance game frameworks using modern web technologies and graphics APIs. Demonstrated ability to lead technical initiatives, mentor junior developers, and collaborate effectively across QA, Art, Production, and Legal teams.
                 </div>
             </div>
 
-            <div class="job">
-                <div class="job-header">
-                    <span>
-                        <div class="job-title">Framework Developer</div>
-                        <div class="job-company">Light & Wonder - iGaming</div>
-                    </span>
-                    <span class="job-dates">August 2023 - March 2026</span>
+            <!-- Professional Experience -->
+            <div class="section">
+                <div class="section-title">Experience</div>
+
+                <div class="job">
+                    <div class="job-title">Senior Front-End Software Engineer</div>
+                    <div class="job-company">Light & Wonder - iGaming</div>
+                    <div class="job-location">Montreal, Quebec</div>
+                    <div class="job-dates">March 2026 - Present</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Leading technical initiatives for next-generation iGaming Slots framework development using Godot and TypeScript</li>
+                            <li>Architecting high-performance front-end solutions for production gaming titles</li>
+                            <li>Mentoring junior developers and establishing best practices</li>
+                            <li>Collaborating across QA, Art, Production, Legal, and Game Design teams</li>
+                            <li>Optimizing performance across multiple concurrent game projects</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="job-location">Remote</div>
-                <div class="job-description">
-                    <ul>
-                        <li>Promoted to Senior role after demonstrating technical excellence and leadership capability</li>
-                        <li>Improved and maintained Synergy 2.0+ framework for next-generation iGaming games</li>
-                        <li>Built critical front-end components using React, Redux, and TypeScript</li>
-                        <li>Implemented advanced graphics features using WebGL2 and custom shader creation</li>
-                        <li>Designed and executed performance optimization initiatives resulting in measurable improvements</li>
-                        <li>Worked with diverse teams to ensure framework usability across QA, Art, and Game Design departments</li>
-                    </ul>
+
+                <div class="job">
+                    <div class="job-title">Framework Developer</div>
+                    <div class="job-company">Light & Wonder - iGaming</div>
+                    <div class="job-location">Remote</div>
+                    <div class="job-dates">August 2023 - March 2026</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Promoted to Senior role after demonstrating technical excellence and leadership</li>
+                            <li>Improved and maintained Synergy 2.0+ framework for next-generation iGaming games</li>
+                            <li>Built critical front-end components using React, Redux, and TypeScript</li>
+                            <li>Implemented advanced graphics features using WebGL2 and custom shaders</li>
+                            <li>Designed and executed performance optimization initiatives</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-title">Game Developer</div>
+                    <div class="job-company">Light & Wonder - iGaming</div>
+                    <div class="job-location">Remote</div>
+                    <div class="job-dates">May 2022 - August 2023</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Developed gameplay features and mechanics for production iGaming Slots titles</li>
+                            <li>Collaborated with QA teams to identify and resolve technical issues</li>
+                            <li>Implemented game mechanics using proprietary frameworks</li>
+                            <li>Gained deep understanding of iGaming domain-specific requirements</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-title">AI Programmer (Capstone)</div>
+                    <div class="job-company">Particle Interactive / Algonquin College</div>
+                    <div class="job-location">Ottawa, Ontario</div>
+                    <div class="job-dates">September 2021 - April 2022</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Developed AI systems using C++ and Behavior Trees for Steelwalker project</li>
+                            <li>Implemented advanced game mechanics and custom physics</li>
+                            <li>Collaborated with team of 10 students across multiple disciplines</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="job">
-                <div class="job-header">
-                    <span>
-                        <div class="job-title">Game Developer</div>
-                        <div class="job-company">Light & Wonder - iGaming</div>
-                    </span>
-                    <span class="job-dates">May 2022 - August 2023</span>
-                </div>
-                <div class="job-location">Remote</div>
-                <div class="job-description">
-                    <ul>
-                        <li>Developed gameplay features and mechanics for production iGaming Slots titles</li>
-                        <li>Collaborated with QA teams to identify and resolve technical issues</li>
-                        <li>Implemented game mechanics using proprietary frameworks and cutting-edge technologies</li>
-                        <li>Contributed to framework improvements and architectural discussions</li>
-                        <li>Gained deep understanding of iGaming domain-specific requirements and constraints</li>
-                    </ul>
-                </div>
-            </div>
+            <!-- Education -->
+            <div class="section">
+                <div class="section-title">Education</div>
 
-            <div class="job">
-                <div class="job-header">
-                    <span>
-                        <div class="job-title">AI Programmer (Capstone Project)</div>
-                        <div class="job-company">Particle Interactive / Algonquin College</div>
-                    </span>
-                    <span class="job-dates">September 2021 - April 2022</span>
+                <div class="education">
+                    <div class="education-school">Algonquin College of Applied Arts and Technology</div>
+                    <div class="education-program">Game Development (3 Years Advanced Diploma)</div>
+                    <div class="education-details">
+                        <p><strong>Ottawa, Ontario</strong> | September 2019 - April 2022</p>
+                        <p>GPA: 3.85 / 4.0 | Specializing in Programming</p>
+                    </div>
                 </div>
-                <div class="job-location">Ottawa, Ontario</div>
-                <div class="job-description">
-                    <ul>
-                        <li>Developed AI systems using C++ and Behavior Trees for Steelwalker capstone project</li>
-                        <li>Implemented advanced game mechanics including custom physics and grappling systems</li>
-                        <li>Collaborated with team of 10 students across multiple disciplines (Design, Art, Gameplay)</li>
-                        <li>Contributed to technical architecture decisions for production-quality game engine</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Education -->
-        <div class="section">
-            <div class="section-title">Education</div>
-
-            <div class="education">
-                <div class="education-school">Algonquin College of Applied Arts and Technology</div>
-                <div class="education-program">Game Development (3 Years Advanced Diploma) - Specializing in Programming</div>
-                <div class="education-details">
-                    <p><strong>Ottawa, Ontario</strong> | September 2019 - April 2022</p>
-                    <p>Cumulative GPA: 3.85 / 4.0</p>
-                    <p>Focus: Object-Oriented Programming, Graphics Programming, Game Architecture</p>
-                </div>
-            </div>
-
-            <div class="education">
-                <div class="education-program">Professional Development</div>
-                <div class="education-details">
-                    <ul class="skill-list">
-                        <li>Modern React with Redux (Udemy) - Summer 2021</li>
-                        <li>3D Programming with JavaScript and Three.js (Udemy) - Summer 2021</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Key Achievements -->
-        <div class="section">
-            <div class="section-title">Key Achievements</div>
-            <div class="achievements">
-                <div class="achievement">
-                    <strong>Career Progression:</strong> Advanced from Junior Gameplay Developer to Senior Engineer in 4 years, demonstrating technical growth and leadership capability
-                </div>
-                <div class="achievement">
-                    <strong>Framework Expertise:</strong> Deep involvement in Synergy framework development, enabling production delivery of multiple iGaming titles
-                </div>
-                <div class="achievement">
-                    <strong>Performance Optimization:</strong> Led initiatives resulting in measurable improvements to frame rates and memory efficiency
-                </div>
-                <div class="achievement">
-                    <strong>Team Leadership:</strong> Currently mentoring junior developers and establishing best practices for scalable code architecture
-                </div>
-                <div class="achievement">
-                    <strong>Cross-functional Collaboration:</strong> Successfully worked with QA, Art, Production, and Legal teams to translate complex requirements into technical solutions
-                </div>
-                <div class="achievement">
-                    <strong>Graphics Programming:</strong> Implemented advanced WebGL2 features and custom shader creation for enhanced visual performance
-                </div>
-            </div>
-        </div>
-
-        <!-- Technical Highlights -->
-        <div class="section">
-            <div class="section-title">Technical Highlights</div>
-            <ul class="highlights">
-                <li><strong>iGaming Expertise:</strong> 4+ years of specialized experience in Slots game development with understanding of complex regulatory and compliance requirements</li>
-                <li><strong>Framework Architecture:</strong> Designed and implemented components of proprietary game frameworks used in production</li>
-                <li><strong>Performance:</strong> Optimized rendering pipelines and game logic resulting in improved performance metrics</li>
-                <li><strong>Leadership:</strong> Successfully transitioned from individual contributor to senior engineer mentoring other developers</li>
-                <li><strong>Full-Stack Game Dev:</strong> Capable across gameplay programming, framework development, and front-end optimization</li>
-            </ul>
-        </div>
-
-        <!-- About -->
-        <div class="section">
-            <div class="section-title">About</div>
-            <div class="about-text">
-                Passionate about game development and software engineering with proven ability to grow from entry-level to senior roles through technical excellence and dedication. Particularly interested in framework architecture, graphics programming, and building scalable systems. Committed to continuous learning and mentoring the next generation of game developers.
             </div>
         </div>
     </div>
