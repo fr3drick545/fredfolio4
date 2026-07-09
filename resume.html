@@ -1,4 +1,4 @@
-us e<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -43,9 +43,9 @@ us e<!DOCTYPE html>
         }
 
         .header {
-            padding-bottom: 25px;
-            margin-bottom: 35px;
-            border-bottom: 3px solid #00d4ff;
+            padding-bottom: 2px;
+            /* margin-bottom: 35px; */
+            /* border-bottom: 3px solid #00d4ff; */
         }
 
         .name {
@@ -169,6 +169,30 @@ us e<!DOCTYPE html>
             color: #2c3e50;
             font-size: 12px;
             border-radius: 2px;
+        }
+
+        .summary-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .summary-list li {
+            margin-bottom: 8px;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .summary-list li::before {
+            content: "▪";
+            position: absolute;
+            left: 0;
+            color: #00516f;
+            font-weight: bold;
+        }
+
+        .summary-list li:last-child {
+            margin-bottom: 0;
         }
 
         .job {
@@ -460,7 +484,13 @@ us e<!DOCTYPE html>
             <div class="section">
                 <div class="section-title">Professional Summary</div>
                 <div class="professional-summary">
-                    Senior Front-End Software Engineer with 4+ years of professional experience at Light & Wonder, specializing in iGaming Slots development and proprietary framework architecture. Proven track record of advancing from Junior Gameplay Developer to Senior Engineer through technical excellence and leadership. Expert in building high-performance game frameworks using modern web technologies and graphics APIs. Demonstrated ability to lead technical initiatives, mentor junior developers, and collaborate effectively across QA, Art, Production, and Legal teams.
+                    <ul class="summary-list">
+                        <li>4+ years of professional experience at Light & Wonder specializing in iGaming Slots development</li>
+                        <li>Proven track record advancing from Junior Gameplay Developer to Senior Engineer</li>
+                        <li>Expert in building high-performance game frameworks using modern web technologies and graphics APIs</li>
+                        <li>Technical leader with demonstrated ability to mentor junior developers and establish best practices</li>
+                        <li>Strong collaborator across QA, Art, Production, Legal, and Game Design teams</li>
+                    </ul>
                 </div>
             </div>
 
@@ -471,7 +501,6 @@ us e<!DOCTYPE html>
                 <div class="job">
                     <div class="job-title">Senior Front-End Software Engineer</div>
                     <div class="job-company">Light & Wonder - iGaming</div>
-                    <div class="job-location">Montreal, Quebec</div>
                     <div class="job-dates">March 2026 - Present</div>
                     <div class="job-description">
                         <ul>
@@ -487,23 +516,21 @@ us e<!DOCTYPE html>
                 <div class="job">
                     <div class="job-title">Framework Developer</div>
                     <div class="job-company">Light & Wonder - iGaming</div>
-                    <div class="job-location">Remote</div>
                     <div class="job-dates">August 2023 - March 2026</div>
                     <div class="job-description">
                         <ul>
-                            <li>Promoted to Senior role after demonstrating technical excellence and leadership</li>
                             <li>Improved and maintained Synergy 2.0+ framework for next-generation iGaming games</li>
                             <li>Built critical front-end components using React, Redux, and TypeScript</li>
                             <li>Implemented advanced graphics features using WebGL2 and custom shaders</li>
                             <li>Designed and executed performance optimization initiatives</li>
+                            <li>Promoted to Senior role after demonstrating technical excellence and leadership</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="job">
-                    <div class="job-title">Game Developer</div>
+                    <div class="job-title">Game Developer - Junior</div>
                     <div class="job-company">Light & Wonder - iGaming</div>
-                    <div class="job-location">Remote</div>
                     <div class="job-dates">May 2022 - August 2023</div>
                     <div class="job-description">
                         <ul>
@@ -518,7 +545,6 @@ us e<!DOCTYPE html>
                 <div class="job">
                     <div class="job-title">AI Programmer (Capstone)</div>
                     <div class="job-company">Particle Interactive / Algonquin College</div>
-                    <div class="job-location">Ottawa, Ontario</div>
                     <div class="job-dates">September 2021 - April 2022</div>
                     <div class="job-description">
                         <ul>
@@ -538,8 +564,8 @@ us e<!DOCTYPE html>
                     <div class="education-school">Algonquin College of Applied Arts and Technology</div>
                     <div class="education-program">Game Development (3 Years Advanced Diploma)</div>
                     <div class="education-details">
-                        <p><strong>Ottawa, Ontario</strong> | September 2019 - April 2022</p>
-                        <p>GPA: 3.85 / 4.0 | Specializing in Programming</p>
+                        <p>Ottawa, Ontario | September 2019 - April 2022</p>
+                        <p>GPA: 3.85 / 4.0 | <strong>Graduated with Honors</strong></p>
                     </div>
                 </div>
             </div>
